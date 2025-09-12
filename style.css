@@ -25,6 +25,10 @@ nav a {
   font-weight: bold;
 }
 
+nav a.active {
+  border-bottom: 2px solid #ffcc00; /* highlight underline */
+}
+
 nav a:hover {
   text-decoration: underline;
 }
