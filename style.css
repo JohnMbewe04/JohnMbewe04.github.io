@@ -25,9 +25,9 @@ nav a:hover {
 }
 
 main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 footer {
@@ -39,7 +39,7 @@ footer {
 }
 
 section {
-  min-height: 100vh; /* Full screen height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,6 +47,30 @@ section {
   padding: 40px;
   text-align: center;
   transition: background 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #111; /* Default dark text */
+}
+
+/* Overlay for image backgrounds */
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark transparent layer */
+  z-index: 0;
+}
+
+/* Make text sit above overlay */
+section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Example adjustments */
+.about, .projects {
+  color: white; /* force white text over dark overlay */
 }
 
 /* Different backgrounds */
@@ -58,11 +82,11 @@ section {
 .contact { background: #222; color: white; }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* min 2rem, scales with viewport, max 3rem */
   margin-bottom: 20px;
 }
 
 p, ul {
-  font-size: 1.2rem;
-  max-width: 700px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 900px;
 }
