@@ -11,6 +11,11 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
+  position: fixed;     /* Make it stick */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;       /* Ensure it stays above everything */
 }
 
 nav a {
@@ -25,9 +30,14 @@ nav a:hover {
 }
 
 main {
+  margin-top: 100px;   /* Push content down so it doesn’t hide behind header */
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 footer {
