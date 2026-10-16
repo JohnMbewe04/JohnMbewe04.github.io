@@ -396,7 +396,7 @@ section, .slide { position: relative; width: 100%; max-width: calc(var(--maxw) +
   html { font-size: 118%; }
   :root { --maxw: 1760px; }
 }
-.hint { margin-top: 10px; }
+.hint { margin-top: clamp(18px, 5vh, 48px); position: relative; z-index: 1; padding: 4px 12px; border-radius: 999px; background: rgba(4,5,10,.55); }
 
 /* ---------- reduced motion: stop persistent loops ---------- */
 @media (prefers-reduced-motion: reduce) {
