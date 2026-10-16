@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>W.A.V.E · Chisomo Mbewe</title>
+  <meta name="description" content="A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="W.A.V.E · Chisomo Mbewe">
+  <meta property="og:description" content="A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.">
+  <meta property="og:image" content="../assets/img/wave/boat.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js" defer></script>
+  <script type="module" src="../bg.js"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="wave" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#work">← Selected work</a>
+        <div class="slide-meta"><span class="state"><i></i>Completed</span><span class="pj-tags"><a href="../index.html#archive">Hardware &amp; Embedded</a><a href="../index.html#archive">AI &amp; Data</a><a href="../index.html#archive">Software</a></span></div>
+        <h1>W.A.V.E</h1>
+        <p class="slide-kicker">Water Assessment Vessel for Ecosystems</p>
+        <p class="lede">A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.</p>
+      </div>
+      <figure class="pj-visual zoomable"><img src="../assets/img/wave/boat.webp" alt="A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean." width="1100" height="874" fetchpriority="high"></figure>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Outcome</dt><dd>Grand Champion · AgriXcelerate 2026</dd></div><div><dt>Role</dt><dd>Firmware, sensor calibration and the live web dashboard</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Team</dt><dd>Team of five: Chisomo Mbewe, Farhan Aziz Umrani, Ian Omonda, Sugan Raaj, Ahmed Greynoon</dd></div><div><dt>Context</dt><dd>Group Design Project, APU. Entered in AgriXcelerate 2026 (Sustainability category).</dd></div></dl></section>
+    <section class="pj-body" data-shape="wave" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>Smallholder fish farmers check their water by eye or with occasional spot samples, and lab results take days. Runoff after rain or an overnight drop in water quality goes unnoticed until the fish die.</p><p>W.A.V.E is an 80 × 48 × 24 cm 3D-printed PETG catamaran with twin jet drives, a 50 W solar panel with MPPT charging and a sealed IP65 electronics bay. An eight-in-one RS-485 sonde under the hull reads pH, conductivity, ORP and temperature as the boat moves.</p><p>Engine 1, a 100-tree Random Forest running on the ESP32-S3, sorts the water into five classes (A pristine to E toxic) aligned to Malaysia&#x27;s National Water Quality Standards. Because it runs on the boat, it keeps working when the mobile signal drops. Engine 2, a FastAPI service, uses the boat&#x27;s GPS fix to pull real fish records from GBIF and reports which local species can survive in that water, plus likely pollution sources within 5 km from OpenStreetMap.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Wrote the dual-core ESP32-S3 firmware on FreeRTOS: Modbus RS-485 reads from the sonde, GPS, and the on-chip classifier.</span></li><li><span class="did-n">02</span><span>Calibrated the pH, conductivity, ORP and temperature channels against reference solutions.</span></li><li><span class="did-n">03</span><span>Built the 4G uplink (SIM7600) to Firebase every 20 seconds, with store-and-forward buffering so no readings are lost during signal dropouts.</span></li><li><span class="did-n">04</span><span>Built the Next.js dashboard: mission overview, satellite survey map, live telemetry, power management and the AI intelligence view.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>RS-485 sonde</span></li><li style="--i:1"><span>ESP32-S3 · FreeRTOS</span></li><li style="--i:2"><span>Edge Random Forest</span></li><li style="--i:3"><span>4G LTE</span></li><li style="--i:4"><span>Firebase</span></li><li style="--i:5"><span>Next.js dashboard</span></li><li style="--i:6"><span>GBIF engine</span></li></ol>
+        <h2>Next steps</h2><p>Autonomous survey routes, a custom PCB, dissolved-oxygen and ammonia probes, then pilots on local fish farms checked against lab results.</p>
+      </div>
+      <aside class="pj-side">
+        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">0.944</p><p class="res-l">F1 score on 106,671 unseen test rows (0.978 on validation)</p></div><div class="res"><p class="res-v">A–E</p><p class="res-l">water classes aligned to Malaysia&#x27;s NWQS</p></div><div class="res"><p class="res-v">14</p><p class="res-l">fish species found that can live in the APU lake</p></div><div class="res"><p class="res-v">RM 1,124</p><p class="res-l">to build. About RM 112 per pond when a 10-pond cooperative shares one boat</p></div></div>
+        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>ESP32-S3</span><span>FreeRTOS</span><span>RS-485 Modbus</span><span>SIM7600 4G/GPS</span><span>Random Forest</span><span>Firebase</span><span>Next.js</span><span>FastAPI</span><span>GBIF</span><span>OpenStreetMap</span><span>SOLIDWORKS</span><span>PETG printing</span></p></div>
+        <div class="side-links"><a class="btn btn-grad magnetic" href="https://w-a-v-e.web.app" target="_blank" rel="noopener">Live dashboard (view only) ↗</a><a class="btn btn-grad magnetic" href="https://wave-info.vercel.app" target="_blank" rel="noopener">Project website ↗</a></div>
+      </aside>
+    </section>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="wave" data-x="-0.6" data-y="0" data-o="0.3" data-s="0.8">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Gallery · 17 images</p>
+      <h2 id="gal-title">A closer look</h2>
+      <div class="gal"><figure class="g-item reveal zoomable"><img src="../assets/img/profile/trophy.webp" alt="Grand Champion trophy, cheque and certificates from AgriXcelerate 2026." width="768" height="1020" loading="lazy"><figcaption>Grand Champion trophy, cheque and certificates from AgriXcelerate 2026.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/profile/team-win.webp" alt="The team after the win." width="1080" height="810" loading="lazy"><figcaption>The team after the win.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/dash-overview.webp" alt="Live dashboard: mission overview with system health and alerts." width="1600" height="1000" loading="lazy"><figcaption>Live dashboard: mission overview with system health and alerts.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/dash-map.webp" alt="Spatial command view: satellite survey map, geofencing and remote drive." width="1600" height="1000" loading="lazy"><figcaption>Spatial command view: satellite survey map, geofencing and remote drive.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/dash-telemetry.webp" alt="Water telemetry: live pH, temperature, ORP and conductivity cards with the current NWQS class." width="1600" height="1000" loading="lazy"><figcaption>Water telemetry: live pH, temperature, ORP and conductivity cards with the current NWQS class.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/dash-ai.webp" alt="AI intelligence: Engine 1 class with confidence, and Engine 2 species results." width="1600" height="1000" loading="lazy"><figcaption>AI intelligence: Engine 1 class with confidence, and Engine 2 species results.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/dash-power.webp" alt="Power management: solar input, battery state and MPPT data." width="1600" height="1000" loading="lazy"><figcaption>Power management: solar input, battery state and MPPT data.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/slide-pipeline.webp" alt="Pitch deck: from pond to phone in one pipeline." width="1600" height="1000" loading="lazy"><figcaption>Pitch deck: from pond to phone in one pipeline.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/slide-engine1.webp" alt="Pitch deck: four readings in, one clear water class out." width="1600" height="1000" loading="lazy"><figcaption>Pitch deck: four readings in, one clear water class out.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/slide-engine2.webp" alt="Pitch deck: Engine 2 names the fish that can live there." width="1600" height="1000" loading="lazy"><figcaption>Pitch deck: Engine 2 names the fish that can live there.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/slide-built.webp" alt="Pitch deck: built, sealed and proven on water." width="1600" height="1000" loading="lazy"><figcaption>Pitch deck: built, sealed and proven on water.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/info-site.webp" alt="The public project website." width="1600" height="1000" loading="lazy"><figcaption>The public project website.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/electronics.webp" alt="The sealed electronics bay." width="810" height="1080" loading="lazy"><figcaption>The sealed electronics bay.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/hull.webp" alt="Hull halves, printed in 12 segments so any damaged part can be reprinted." width="900" height="1600" loading="lazy"><figcaption>Hull halves, printed in 12 segments so any damaged part can be reprinted.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/water-test.webp" alt="First float test." width="810" height="1080" loading="lazy"><figcaption>First float test.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/solar.webp" alt="50 W solar panel mounted on the deck." width="1100" height="1467" loading="lazy"><figcaption>50 W solar panel mounted on the deck.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/wave/printing.webp" alt="Hull segments printing in PETG." width="1100" height="1467" loading="lazy"><figcaption>Hull segments printing in PETG.</figcaption></figure></div>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="semester-planner.html" class="tilt"><span>← Previous</span><strong>Semester Planner in C</strong></a>
+      <a href="agrhi-iot.html" class="tilt pj-nav-next"><span>Next →</span><strong>Autopot &amp; Fertigation IoT</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

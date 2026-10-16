@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Diabetes Risk Predictor · Chisomo Mbewe</title>
+  <meta name="description" content="Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="Diabetes Risk Predictor · Chisomo Mbewe">
+  <meta property="og:description" content="Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.">
+  <meta property="og:image" content="../assets/img/diabetes-predictor/model-comparison.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js" defer></script>
+  <script type="module" src="../bg.js"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="sphere" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#archive">← Archive</a>
+        <div class="slide-meta"><span class="state"><i></i>Completed</span><span class="pj-tags"><a href="../index.html#archive">AI &amp; Data</a><a href="../index.html#archive">Software</a></span></div>
+        <h1>Diabetes Risk Predictor</h1>
+        <p class="slide-kicker">Eight classifiers compared, the best one shipped</p>
+        <p class="lede">Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.</p>
+      </div>
+      <figure class="pj-visual zoomable"><img src="../assets/img/diabetes-predictor/model-comparison.webp" alt="Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app." width="989" height="590" fetchpriority="high"></figure>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Role</dt><dd>Individual</dd></div><div><dt>Year</dt><dd>2025</dd></div><div><dt>Team</dt><dd>Individual</dd></div><div><dt>Context</dt><dd>Rocheston Certified AI Engineer programme, APU.</dd></div></dl></section>
+    <section class="pj-body" data-shape="sphere" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>I explored the 768-record Pima dataset (distributions, correlations, class balance), then trained and compared logistic regression, KNN, four SVM kernels, a random forest and a decision tree on the same split.</p><p>KNN with k = 23 scored best. I deployed it in a Streamlit web app and in a Tkinter desktop app packaged as a Windows executable.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Did the exploratory analysis and feature correlation.</span></li><li><span class="did-n">02</span><span>Swept k from 1 to 30 to tune KNN.</span></li><li><span class="did-n">03</span><span>Benchmarked eight models on accuracy, precision, recall and F1.</span></li><li><span class="did-n">04</span><span>Built the Streamlit web app and the slider-based desktop app with a confidence readout.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>Pima dataset</span></li><li style="--i:1"><span>EDA</span></li><li style="--i:2"><span>8 models</span></li><li style="--i:3"><span>KNN, k = 23</span></li><li style="--i:4"><span>Streamlit &amp; desktop app</span></li></ol>
+        
+      </div>
+      <aside class="pj-side">
+        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">78.6%</p><p class="res-l">test accuracy, KNN (k = 23)</p></div><div class="res"><p class="res-v">8</p><p class="res-l">models benchmarked</p></div><div class="res"><p class="res-v">0.67</p><p class="res-l">F1 on the diabetic class</p></div></div>
+        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>seaborn</span><span>Streamlit</span><span>Tkinter</span><span>PyInstaller</span></p></div>
+        
+      </aside>
+    </section>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="sphere" data-x="-0.6" data-y="0" data-o="0.3" data-s="0.8">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Gallery · 5 images</p>
+      <h2 id="gal-title">A closer look</h2>
+      <div class="gal"><figure class="g-item reveal zoomable"><img src="../assets/img/diabetes-predictor/desktop-app.webp" alt="The desktop app, run for this portfolio: a sample patient predicted diabetic at 87.5% confidence." width="640" height="520" loading="lazy"><figcaption>The desktop app, run for this portfolio: a sample patient predicted diabetic at 87.5% confidence.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/diabetes-predictor/k-search.webp" alt="Finding the best k for KNN." width="855" height="470" loading="lazy"><figcaption>Finding the best k for KNN.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/diabetes-predictor/correlation.webp" alt="Feature correlation heatmap." width="682" height="586" loading="lazy"><figcaption>Feature correlation heatmap.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/diabetes-predictor/knn-confusion.webp" alt="KNN confusion matrix." width="511" height="413" loading="lazy"><figcaption>KNN confusion matrix.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/diabetes-predictor/distributions.webp" alt="Feature distributions." width="1400" height="1062" loading="lazy"><figcaption>Feature distributions.</figcaption></figure></div>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="dsm-fuzzy.html" class="tilt"><span>← Previous</span><strong>Fuzzy-Logic Demand-Side Management</strong></a>
+      <a href="smart-energy-meter.html" class="tilt pj-nav-next"><span>Next →</span><strong>Smart Energy Monitor</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

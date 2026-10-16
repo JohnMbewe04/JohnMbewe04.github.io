@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RecipeRun · Chisomo Mbewe</title>
+  <meta name="description" content="Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="RecipeRun · Chisomo Mbewe">
+  <meta property="og:description" content="Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.">
+  <meta property="og:image" content="../assets/img/reciperun/home.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js" defer></script>
+  <script type="module" src="../bg.js"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="torus" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#work">← Selected work</a>
+        <div class="slide-meta"><span class="state"><i></i>Completed</span><span class="pj-tags"><a href="../index.html#archive">AI &amp; Data</a><a href="../index.html#archive">Software</a></span></div>
+        <h1>RecipeRun</h1>
+        <p class="slide-kicker">AI cooking assistant</p>
+        <p class="lede">Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.</p>
+      </div>
+      <figure class="pj-visual zoomable pj-phone"><img src="../assets/img/reciperun/home.webp" alt="Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode." width="482" height="1075" fetchpriority="high"></figure>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Outcome</dt><dd>RevenueCat Shipyard hackathon entry</dd></div><div><dt>Role</dt><dd>Developer: app, cloud functions and AI pipeline</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Context</dt><dd>RevenueCat Shipyard hackathon.</dd></div></dl></section>
+    <section class="pj-body" data-shape="torus" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>People save recipes from social media and then can&#x27;t use them. RecipeRun takes a link, a photo or a video and turns it into a structured recipe card that can feed a grocery list and a guided cook mode.</p><p>The app uses Flutter with Provider state, Firebase Auth and Firestore, and TypeScript Cloud Functions. RevenueCat manages subscriptions with a single “premium” entitlement that unlocks cook mode, personalisation and smart ingredient swaps.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Built the cross-platform Flutter app and the Firestore data model (profiles, preferences, recipes).</span></li><li><span class="did-n">02</span><span>Wrote the AI parsing pipeline that turns unstructured posts into normalised JSON (title, ingredients, steps).</span></li><li><span class="did-n">03</span><span>Built a routing layer that sends each job to Gemini 2.0 Flash or GPT-4o-mini depending on whether it needs speed, low cost or reasoning.</span></li><li><span class="did-n">04</span><span>Integrated RevenueCat purchases and entitlements, and tested them with Play Store internal testing.</span></li><li><span class="did-n">05</span><span>Added merged grocery lists, nearby-store maps and location and currency caching.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>Video / image / link</span></li><li style="--i:1"><span>AI router</span></li><li style="--i:2"><span>Gemini ⇄ OpenAI</span></li><li style="--i:3"><span>Structured JSON</span></li><li style="--i:4"><span>Firestore</span></li><li style="--i:5"><span>Flutter app</span></li></ol>
+        
+      </div>
+      <aside class="pj-side">
+        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">3</p><p class="res-l">input types: link, image and video</p></div><div class="res"><p class="res-v">1</p><p class="res-l">entitlement controlling every premium feature</p></div><div class="res"><p class="res-v">16</p><p class="res-l">designed screens, from onboarding to paywall</p></div></div>
+        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>Flutter</span><span>Dart</span><span>Provider</span><span>Firebase Auth</span><span>Cloud Firestore</span><span>TypeScript</span><span>Cloud Functions</span><span>Gemini</span><span>OpenAI</span><span>RevenueCat</span></p></div>
+        
+      </aside>
+    </section>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="torus" data-x="-0.6" data-y="0" data-o="0.3" data-s="0.8">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Gallery · 7 images</p>
+      <h2 id="gal-title">A closer look</h2>
+      <div class="gal gal-phones"><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/welcome.webp" alt="Welcome." width="486" height="1068" loading="lazy"><figcaption>Welcome.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/processing.webp" alt="AI extraction in progress." width="483" height="1063" loading="lazy"><figcaption>AI extraction in progress.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/meal.webp" alt="Meal breakdown." width="491" height="1078" loading="lazy"><figcaption>Meal breakdown.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/cooking.webp" alt="Step-by-step cook mode." width="476" height="1078" loading="lazy"><figcaption>Step-by-step cook mode.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/grocery.webp" alt="Merged grocery list." width="488" height="1078" loading="lazy"><figcaption>Merged grocery list.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/maps.webp" alt="Nearby stores and delivery." width="490" height="1078" loading="lazy"><figcaption>Nearby stores and delivery.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/reciperun/subscription.webp" alt="RevenueCat paywall." width="467" height="1078" loading="lazy"><figcaption>RevenueCat paywall.</figcaption></figure></div>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="trustport.html" class="tilt"><span>← Previous</span><strong>TrustPort</strong></a>
+      <a href="epsscom.html" class="tilt pj-nav-next"><span>Next →</span><strong>EPSSCOM 2026</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

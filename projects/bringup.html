@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BringUp · Chisomo Mbewe</title>
+  <meta name="description" content="Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="BringUp · Chisomo Mbewe">
+  <meta property="og:description" content="Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.">
+  <meta property="og:image" content="../assets/img/profile/portrait.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js" defer></script>
+  <script type="module" src="../bg.js"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="galaxy" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#work">← Selected work</a>
+        <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span class="pj-tags"><a href="../index.html#archive">AI &amp; Data</a><a href="../index.html#archive">Hardware &amp; Embedded</a></span></div>
+        <h1>BringUp</h1>
+        <p class="slide-kicker">An agent that proves firmware works on the wire</p>
+        <p class="lede">Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.</p>
+      </div>
+      <div class="pj-visual"><div class="loop-viz" role="img" aria-label="BringUp agent loop: ingest, plan, preflight, build, flash, observe, verify, diagnose">
+      <svg viewBox="0 0 600 420">
+        <defs><linearGradient id="lvg" x1="0" x2="1"><stop offset="0" stop-color="#6f8dff"/><stop offset=".5" stop-color="#b07bff"/><stop offset="1" stop-color="#ff6ec7"/></linearGradient></defs>
+        <ellipse class="lv-ring" cx="300" cy="210" rx="205" ry="150"/>
+        <ellipse class="lv-ring lv-ring-2" cx="300" cy="210" rx="120" ry="86"/>
+        <g class="lv-node" style="--i:0"><circle cx="300" cy="60" r="7"/><text x="300" y="44" text-anchor="middle">Ingest</text></g><g class="lv-node" style="--i:1"><circle cx="445" cy="104" r="7"/><text x="445" y="88" text-anchor="middle">Plan</text></g><g class="lv-node" style="--i:2"><circle cx="505" cy="210" r="7"/><text x="505" y="194" text-anchor="middle">Preflight</text></g><g class="lv-node" style="--i:3"><circle cx="445" cy="316" r="7"/><text x="445" y="344" text-anchor="middle">Build</text></g><g class="lv-node" style="--i:4"><circle cx="300" cy="360" r="7"/><text x="300" y="388" text-anchor="middle">Flash</text></g><g class="lv-node" style="--i:5"><circle cx="155" cy="316" r="7"/><text x="155" y="344" text-anchor="middle">Observe</text></g><g class="lv-node" style="--i:6"><circle cx="95" cy="210" r="7"/><text x="95" y="238" text-anchor="middle">Verify</text></g><g class="lv-node" style="--i:7"><circle cx="155" cy="104" r="7"/><text x="155" y="88" text-anchor="middle">Diagnose</text></g>
+        <circle class="lv-runner" r="5"><animateMotion dur="9s" repeatCount="indefinite" path="M300,60 a205,150 0 1,1 -0.1,0"/></circle>
+        <text class="lv-core" x="300" y="204" text-anchor="middle">LLM proposes</text>
+        <text class="lv-core lv-core-2" x="300" y="230" text-anchor="middle">verifier judges</text>
+      </svg>
+    </div></div>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Outcome</dt><dd>Nebius × NVIDIA Global AI Hackathon · building now</dd></div><div><dt>Role</dt><dd>Builder: architecture, agent loop and hardware bridge</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Context</dt><dd>Nebius × NVIDIA Global AI Hackathon, Coding &amp; Agentic Engineering track. Due 31 Oct 2026.</dd></div></dl></section>
+    <section class="pj-body" data-shape="galaxy" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>Coding agents can write firmware, but nobody knows it works until it runs on hardware. BringUp closes that loop with a USB logic analyser that costs about RM 30.</p><p>The key design rule is that the LLM proposes and explains, while deterministic code measures and judges. A run passes only when the verifier says so from real bus and serial evidence, never because the model claims success.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Designed the agent loop: ingest datasheet → plan → preflight wiring → implement → build → flash → observe → verify → diagnose.</span></li><li><span class="did-n">02</span><span>Split the work across NVIDIA Nemotron models: Ultra for datasheet reasoning and diagnosis, Super for code generation, Nano for log triage and quick fixes.</span></li><li><span class="did-n">03</span><span>Built a hardware bridge: PlatformIO build and upload, serial capture, and sigrok-cli I²C/SPI decoding.</span></li><li><span class="did-n">04</span><span>Defined the fault demos: wrong address, missing pull-up and a fake BMP280 sold as a BME280, each diagnosed from bus evidence with a datasheet page citation.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>Datasheet PDF</span></li><li style="--i:1"><span>Nemotron Ultra</span></li><li style="--i:2"><span>Driver (Super)</span></li><li style="--i:3"><span>PlatformIO flash</span></li><li style="--i:4"><span>sigrok capture</span></li><li style="--i:5"><span>Deterministic verifier</span></li><li style="--i:6"><span>Evidence report</span></li></ol>
+        
+      </div>
+      <aside class="pj-side">
+        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">L0–L4</p><p class="res-l">verification levels, from the bus responding to valid data</p></div><div class="res"><p class="res-v">RM 30</p><p class="res-l">of extra hardware: one USB logic analyser</p></div><div class="res"><p class="res-v">MIT</p><p class="res-l">licensed CLI, with an MCP server for Cursor and Claude Code</p></div></div>
+        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>Python</span><span>NVIDIA Nemotron</span><span>Nebius Token Factory</span><span>Tavily</span><span>PlatformIO</span><span>sigrok</span><span>ESP32</span><span>I²C / SPI</span><span>MCP</span></p></div>
+        
+      </aside>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="epsscom.html" class="tilt"><span>← Previous</span><strong>EPSSCOM 2026</strong></a>
+      <a href="medical-imaging.html" class="tilt pj-nav-next"><span>Next →</span><strong>Multi-Model Medical Imaging</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lighting Scheme Design · Chisomo Mbewe</title>
+  <meta name="description" content="Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="Lighting Scheme Design · Chisomo Mbewe">
+  <meta property="og:description" content="Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.">
+  <meta property="og:image" content="../assets/img/lighting-design/literature.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js" defer></script>
+  <script type="module" src="../bg.js"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="helix" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#archive">← Archive</a>
+        <div class="slide-meta"><span class="state"><i></i>Completed</span><span class="pj-tags"><a href="../index.html#archive">Power &amp; Simulation</a><a href="../index.html#archive">Design &amp; CAD</a></span></div>
+        <h1>Lighting Scheme Design</h1>
+        <p class="slide-kicker">Four rooms in Relux and AutoCAD</p>
+        <p class="lede">Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.</p>
+      </div>
+      <figure class="pj-visual zoomable"><img src="../assets/img/lighting-design/literature.webp" alt="Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation." width="1180" height="792" fetchpriority="high"></figure>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Role</dt><dd>Individual</dd></div><div><dt>Year</dt><dd>2024</dd></div><div><dt>Team</dt><dd>Individual</dd></div><div><dt>Context</dt><dd>Electrical Power Utilisation, APU.</dd></div></dl></section>
+    <section class="pj-body" data-shape="helix" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>I drew the floor plan in AutoCAD, sized each room&#x27;s fittings with the lumen method, then placed and simulated luminaires in Relux to check illuminance, uniformity and glare.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Hand calculations of fittings per room, including maintenance and utilisation factors.</span></li><li><span class="did-n">02</span><span>Relux 3D models, light distribution curves and false-colour illuminance maps.</span></li><li><span class="did-n">03</span><span>Analysis: the literature club hit its 400 lx target. The tech club came out brighter than needed (768 lx), so I recommended fewer or dimmer fittings.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>Floor plan</span></li><li style="--i:1"><span>Lumen method</span></li><li style="--i:2"><span>Luminaire choice</span></li><li style="--i:3"><span>Relux simulation</span></li><li style="--i:4"><span>Review</span></li></ol>
+        
+      </div>
+      <aside class="pj-side">
+        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">440 lx</p><p class="res-l">average in the literature club (target 400)</p></div><div class="res"><p class="res-v">7.47 W/m²</p><p class="res-l">power density, literature club</p></div><div class="res"><p class="res-v">4</p><p class="res-l">rooms designed</p></div></div>
+        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>Relux</span><span>AutoCAD</span><span>Lumen method</span></p></div>
+        
+      </aside>
+    </section>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="helix" data-x="-0.6" data-y="0" data-o="0.3" data-s="0.8">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Gallery · 7 images</p>
+      <h2 id="gal-title">A closer look</h2>
+      <div class="gal"><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/overview-3d.webp" alt="Whole floor in 3D." width="746" height="582" loading="lazy"><figcaption>Whole floor in 3D.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/tech.webp" alt="Tech club room." width="1211" height="816" loading="lazy"><figcaption>Tech club room.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/culture.webp" alt="Culture club stage lighting." width="1727" height="512" loading="lazy"><figcaption>Culture club stage lighting.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/common.webp" alt="Common room." width="1042" height="612" loading="lazy"><figcaption>Common room.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/distribution.webp" alt="Light distribution curves." width="860" height="616" loading="lazy"><figcaption>Light distribution curves.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/false-colour.webp" alt="False-colour illuminance map." width="1541" height="548" loading="lazy"><figcaption>False-colour illuminance map.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/lighting-design/floor-plan.webp" alt="AutoCAD floor plan." width="1506" height="750" loading="lazy"><figcaption>AutoCAD floor plan.</figcaption></figure></div>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="amplifier.html" class="tilt"><span>← Previous</span><strong>Two-Stage BJT Amplifier</strong></a>
+      <a href="humanoid-robot.html" class="tilt pj-nav-next"><span>Next →</span><strong>Humanoid Robot CAD</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

@@ -1,83 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chisomo Mbewe · Electrical &amp; Electronic Engineer</title>
+  <meta name="description" content="Portfolio of Chisomo Mbewe, Electrical &amp; Electronic Engineering student at APU, Kuala Lumpur: embedded systems, IoT, edge AI and power systems. Grand Champion, AgriXcelerate 2026.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:title" content="Chisomo Mbewe · Electrical &amp; Electronic Engineer">
+  <meta property="og:description" content="Portfolio of Chisomo Mbewe, Electrical &amp; Electronic Engineering student at APU, Kuala Lumpur: embedded systems, IoT, edge AI and power systems. Grand Champion, AgriXcelerate 2026.">
+  <meta property="og:image" content="assets/img/profile/portrait.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="main.js" defer></script>
+  <script type="module" src="bg.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#likes">Likes</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#archive">Archive</a><a href="index.html#contact">Contact</a></nav>
+    <a class="btn btn-sm btn-grad" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
   </header>
-
-  <main>
-    <!-- About Me -->
-    <section class="about" id="about">
-      <h2>About Me</h2>
-      <p>Hello! I’m <b>Your Name</b>, an Electrical & Electronic Engineering student at APU, passionate about embedded systems, DSP, and machine vision. I love building tech that makes a difference.</p>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#archive">Archive</a><a href="index.html#contact">Contact</a><a href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main">
+    <section class="hero split" aria-labelledby="hero-title" data-shape="sphere" data-x="0.5" data-y="0" data-o="1" data-s="1">
+      <div class="split-text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Electrical &amp; Electronic Engineer · Kuala Lumpur</p>
+        <h1 id="hero-title">Chisomo Mbewe</h1>
+        <p class="hero-sub">I build machines that <span class="grad">sense, think and report&nbsp;back.</span></p>
+        <p class="lede">Final-year engineering student at Asia Pacific University. I design the hardware, write the firmware, train the models and build the dashboards, then prove it all in the field.</p>
+        <div class="cta">
+          <a class="btn btn-grad magnetic" href="#work">See my work</a>
+          <a class="btn magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Download resume</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Grand Champion</dt><dd>AgriXcelerate 2026</dd></div>
+          <div><dt>0.944 F1</dt><dd>AI running on a microcontroller</dd></div>
+          <div><dt>20 projects</dt><dd>hardware, AI, power, CAD</dd></div>
+        </dl>
+      </div>
+      <div class="split-visual">
+        <div class="orb-slot orb-hero" data-anchor data-k="1.02">
+          <img class="hero-portrait" src="assets/img/profile/portrait-circle.webp" alt="Chisomo Mbewe" width="595" height="597" fetchpriority="high">
+        </div>
+        <p class="hint">Drag to spin the sphere · move through the particles</p>
+      </div>
     </section>
 
-    <!-- Likes -->
-    <section class="likes" id="likes">
-      <h2>What I Like</h2>
-      <p>I enjoy exploring AI applications, working on embedded systems with ESP32, competing in hackathons, and learning new tools to solve real-world problems.</p>
+    <section class="about split" id="about" aria-labelledby="about-title" data-shape="helix" data-x="-0.5" data-y="0" data-o="0.85" data-s="1">
+      <div class="split-visual"><div class="orb-slot" data-anchor data-k="0.95"></div></div>
+      <div class="split-text reveal">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>About</p>
+        <h2 id="about-title">Where hardware meets intelligence</h2>
+        <p class="lede">I like owning the whole system: the electronics, the firmware, the models and the dashboards people read. I've led a group project every year of my degree, and I enjoy pitching what we build.</p>
+        <dl class="facts">
+          <div><dt>Studying</dt><dd>BEng (Hons) Electrical &amp; Electronic Engineering, APU</dd></div>
+          <div><dt>Currently</dt><dd>Part-time intern at AGRHI HUB · EPSSCOM 2026 · BringUp</dd></div>
+          <div><dt>Recognition</dt><dd>Grand Champion, AgriXcelerate 2026</dd></div>
+          <div><dt>Research</dt><dd>Lead author, IoT fertigation paper &amp; book chapter</dd></div>
+        </dl>
+        <ul class="bars" aria-label="Projects by area"><li><span>Hardware &amp; Embedded</span><span class="bar"><i style="--v:0.70"></i></span><b>7</b></li><li><span>AI &amp; Data</span><span class="bar"><i style="--v:0.80"></i></span><b>8</b></li><li><span>Software</span><span class="bar"><i style="--v:1.00"></i></span><b>10</b></li><li><span>Power &amp; Simulation</span><span class="bar"><i style="--v:0.60"></i></span><b>6</b></li><li><span>Design &amp; CAD</span><span class="bar"><i style="--v:0.20"></i></span><b>2</b></li></ul>
+        <div class="cta"><a class="btn btn-grad magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a><a class="btn magnetic" href="mailto:chisomo.mbewe04@gmail.com">Email me</a></div>
+      </div>
     </section>
 
-    <!-- Skills -->
-    <section class="skills" id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>C, C++, Python, MATLAB</li>
-        <li>Embedded Systems (ESP32, Arduino, IoT)</li>
-        <li>Machine Learning & Computer Vision</li>
-        <li>Power Electronics & Energy Harvesting</li>
-        <li>Signal Processing (Speech/Audio Enhancement)</li>
+    <section class="work-intro" id="work" aria-labelledby="work-title" data-shape="wave" data-x="0" data-y="-0.3" data-o="0.7" data-s="1.1">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Selected work</p>
+      <h2 id="work-title">Six projects, end to end</h2>
+      <p class="lede">Competition wins, research and hackathon builds. Each one opens into a full case study with more graphics.</p>
+    </section>
+    <div class="slides">
+      <article class="slide split" data-shape="wave" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/wave.html" aria-label="Open the W.A.V.E case study"><img src="assets/img/wave/boat.webp" alt="W.A.V.E: A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean." width="1100" height="874" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">01 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2026</span></div>
+          <h3>W.A.V.E</h3>
+          <p class="slide-kicker">Water Assessment Vessel for Ecosystems</p>
+          <p class="slide-sum">A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.</p>
+          <p class="outcome">Grand Champion · AgriXcelerate 2026</p>
+          <p class="chips"><span>Hardware &amp; Embedded</span><span>AI &amp; Data</span><span>Software</span></p>
+          <a class="text-link" href="projects/wave.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="slide split rev" data-shape="helix" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/agrhi-iot.html" aria-label="Open the Autopot &amp; Fertigation IoT case study"><img src="assets/img/agrhi/app-autopot.webp" alt="Autopot &amp; Fertigation IoT: A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control." width="1248" height="977" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">02 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2025–27</span></div>
+          <h3>Autopot &amp; Fertigation IoT</h3>
+          <p class="slide-kicker">Automated plant monitoring and nutrient delivery</p>
+          <p class="slide-sum">A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control.</p>
+          <p class="outcome">Research paper &amp; book chapter</p>
+          <p class="chips"><span>Hardware &amp; Embedded</span><span>Software</span></p>
+          <a class="text-link" href="projects/agrhi-iot.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="slide split" data-shape="sphere" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/trustport.html" aria-label="Open the TrustPort case study"><img src="assets/img/trustport/dashboard.webp" alt="TrustPort: Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check." width="1600" height="772" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">03 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2025</span></div>
+          <h3>TrustPort</h3>
+          <p class="slide-kicker">An AI credit passport for newcomers</p>
+          <p class="slide-sum">Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check.</p>
+          <p class="outcome">VisaVerse hackathon · sole developer</p>
+          <p class="chips"><span>AI &amp; Data</span><span>Software</span></p>
+          <a class="text-link" href="projects/trustport.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="slide split rev" data-shape="torus" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/reciperun.html" aria-label="Open the RecipeRun case study"><div class="phone-row"><img src="assets/img/reciperun/home.webp" alt="" width="482" height="1075" loading="lazy"><img src="assets/img/reciperun/meal.webp" alt="" width="491" height="1078" loading="lazy"><img src="assets/img/reciperun/cooking.webp" alt="" width="476" height="1078" loading="lazy"></div><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">04 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2026</span></div>
+          <h3>RecipeRun</h3>
+          <p class="slide-kicker">AI cooking assistant</p>
+          <p class="slide-sum">Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.</p>
+          <p class="outcome">RevenueCat Shipyard hackathon entry</p>
+          <p class="chips"><span>AI &amp; Data</span><span>Software</span></p>
+          <a class="text-link" href="projects/reciperun.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="slide split" data-shape="circuit" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/epsscom.html" aria-label="Open the EPSSCOM 2026 case study"><img src="assets/img/epsscom/sld-protection.webp" alt="EPSSCOM 2026: A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP." width="1300" height="1814" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">05 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span>2026</span></div>
+          <h3>EPSSCOM 2026</h3>
+          <p class="slide-kicker">Protection coordination for a 132/11 kV substation</p>
+          <p class="slide-sum">A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP.</p>
+          <p class="outcome">Representing APU · finals 24 Oct 2026, UNITEN Putrajaya</p>
+          <p class="chips"><span>Power &amp; Simulation</span></p>
+          <a class="text-link" href="projects/epsscom.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="slide split rev" data-shape="galaxy" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
+        <a class="slide-media tilt reveal" href="projects/bringup.html" aria-label="Open the BringUp case study"><div class="loop-viz" role="img" aria-label="BringUp agent loop: ingest, plan, preflight, build, flash, observe, verify, diagnose">
+      <svg viewBox="0 0 600 420">
+        <defs><linearGradient id="lvg" x1="0" x2="1"><stop offset="0" stop-color="#6f8dff"/><stop offset=".5" stop-color="#b07bff"/><stop offset="1" stop-color="#ff6ec7"/></linearGradient></defs>
+        <ellipse class="lv-ring" cx="300" cy="210" rx="205" ry="150"/>
+        <ellipse class="lv-ring lv-ring-2" cx="300" cy="210" rx="120" ry="86"/>
+        <g class="lv-node" style="--i:0"><circle cx="300" cy="60" r="7"/><text x="300" y="44" text-anchor="middle">Ingest</text></g><g class="lv-node" style="--i:1"><circle cx="445" cy="104" r="7"/><text x="445" y="88" text-anchor="middle">Plan</text></g><g class="lv-node" style="--i:2"><circle cx="505" cy="210" r="7"/><text x="505" y="194" text-anchor="middle">Preflight</text></g><g class="lv-node" style="--i:3"><circle cx="445" cy="316" r="7"/><text x="445" y="344" text-anchor="middle">Build</text></g><g class="lv-node" style="--i:4"><circle cx="300" cy="360" r="7"/><text x="300" y="388" text-anchor="middle">Flash</text></g><g class="lv-node" style="--i:5"><circle cx="155" cy="316" r="7"/><text x="155" y="344" text-anchor="middle">Observe</text></g><g class="lv-node" style="--i:6"><circle cx="95" cy="210" r="7"/><text x="95" y="238" text-anchor="middle">Verify</text></g><g class="lv-node" style="--i:7"><circle cx="155" cy="104" r="7"/><text x="155" y="88" text-anchor="middle">Diagnose</text></g>
+        <circle class="lv-runner" r="5"><animateMotion dur="9s" repeatCount="indefinite" path="M300,60 a205,150 0 1,1 -0.1,0"/></circle>
+        <text class="lv-core" x="300" y="204" text-anchor="middle">LLM proposes</text>
+        <text class="lv-core lv-core-2" x="300" y="230" text-anchor="middle">verifier judges</text>
+      </svg>
+    </div><span class="glare" aria-hidden="true"></span></a>
+        <div class="slide-text reveal">
+          <p class="slide-count">06 <span>/ 06</span></p>
+          <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span>2026</span></div>
+          <h3>BringUp</h3>
+          <p class="slide-kicker">An agent that proves firmware works on the wire</p>
+          <p class="slide-sum">Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.</p>
+          <p class="outcome">Nebius × NVIDIA Global AI Hackathon · building now</p>
+          <p class="chips"><span>AI &amp; Data</span><span>Hardware &amp; Embedded</span></p>
+          <a class="text-link" href="projects/bringup.html">Read the case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <section class="skills split" id="skills" aria-labelledby="skills-title" data-shape="circuit" data-x="0" data-y="0" data-o="0.25" data-s="1.1">
+      <div class="split-text reveal">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Skills map</p>
+        <h2 id="skills-title">Skills, connected to the work</h2>
+        <p class="lede">24 skills linked to the 20 projects where I used them. Hover or tap a node to trace its connections, drag nodes around, and open any project.</p>
+        <div class="map-legend"><span class="lg lg-hw">Hardware &amp; Embedded</span><span class="lg lg-ai">AI &amp; Data</span><span class="lg lg-sw">Software</span><span class="lg lg-power">Power &amp; Simulation</span><span class="lg lg-cad">Design &amp; CAD</span><span class="lg lg-skill">Skill</span></div>
+        <div class="toolkit"><div class="tk"><h3>Embedded &amp; IoT</h3><p>ESP32 / ESP32-S3, FreeRTOS, Arduino, ADS1115, RS-485 Modbus, I²C · SPI · 1-Wire, 4G / GPS modems, Sensor calibration, Logic analysers</p></div><div class="tk"><h3>AI &amp; Data</h3><p>Edge ML on MCUs, scikit-learn, PyTorch · ResNet, Machine vision, Gemini, GPT-4o, Multi-model routing, Agentic workflows</p></div><div class="tk"><h3>Software</h3><p>Python, C / C++, Dart · Flutter, TypeScript, Next.js, FastAPI, Firebase, Streamlit</p></div><div class="tk"><h3>Power &amp; Simulation</h3><p>ETAP, MATLAB, Simulink, Fuzzy Logic Designer, LabVIEW, NI Multisim, LTspice, Relux</p></div><div class="tk"><h3>Design &amp; CAD</h3><p>SOLIDWORKS, AutoCAD, 3D printing</p></div><div class="tk"><h3>How I work</h3><p>Team leadership, Technical writing, Research &amp; validation, Pitching, Proofreading</p></div></div>
+      </div>
+      <div class="map-frame reveal">
+        <canvas class="map-canvas" aria-label="Interactive graph linking skills to projects"></canvas>
+        <div class="map-tip" hidden></div>
+      </div>
+      <script type="application/json" id="map-data">{"nodes": [{"id": "wave", "label": "W.A.V.E", "type": "p", "cat": "hw", "featured": true, "sum": "A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.", "year": "2026"}, {"id": "agrhi-iot", "label": "Autopot & Fertigation IoT", "type": "p", "cat": "hw", "featured": true, "sum": "A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control.", "year": "2025–27"}, {"id": "trustport", "label": "TrustPort", "type": "p", "cat": "ai", "featured": true, "sum": "Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check.", "year": "2025"}, {"id": "reciperun", "label": "RecipeRun", "type": "p", "cat": "ai", "featured": true, "sum": "Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.", "year": "2026"}, {"id": "epsscom", "label": "EPSSCOM 2026", "type": "p", "cat": "power", "featured": true, "sum": "A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP.", "year": "2026"}, {"id": "bringup", "label": "BringUp", "type": "p", "cat": "ai", "featured": true, "sum": "Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.", "year": "2026"}, {"id": "medical-imaging", "label": "Multi-Model Medical Imaging", "type": "p", "cat": "ai", "featured": false, "sum": "Classical machine vision against deep learning on medical images, with four team-built models joined into one desktop app.", "year": "2025"}, {"id": "smart-hospital", "label": "Smart Hospital System", "type": "p", "cat": "hw", "featured": false, "sum": "A bedside unit that reads heart rate, SpO₂, temperature and ECG, alarms on abnormal readings and streams to a central Python dashboard.", "year": "2025"}, {"id": "speech-enhancement", "label": "Speech Enhancement Studio", "type": "p", "cat": "ai", "featured": false, "sum": "A MATLAB app that adds realistic noise to speech, cleans it with four algorithms or a mix of them, and compares the results.", "year": "2025"}, {"id": "piezo-harvester", "label": "Piezoelectric Energy Harvester", "type": "p", "cat": "power", "featured": false, "sum": "A simulated inductorless P-SSHC harvesting interface that beats a standard full-bridge rectifier.", "year": "2025"}, {"id": "dsm-fuzzy", "label": "Fuzzy-Logic Demand-Side Management", "type": "p", "cat": "power", "featured": false, "sum": "A Mamdani fuzzy controller that adjusts household power use by time of day, resident type and current demand, simulated in Simulink.", "year": "2025"}, {"id": "diabetes-predictor", "label": "Diabetes Risk Predictor", "type": "p", "cat": "ai", "featured": false, "sum": "Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.", "year": "2025"}, {"id": "smart-energy-meter", "label": "Smart Energy Monitor", "type": "p", "cat": "sw", "featured": false, "sum": "An app that tracks household devices, charts power use and cost, and gives energy-saving recommendations.", "year": "2024"}, {"id": "hydro-labview", "label": "Hydroelectric Plant Simulation", "type": "p", "cat": "power", "featured": false, "sum": "A live LabVIEW model of a hydro plant: water flow, turbine efficiency, environmental impact and revenue, with event logging and a remote web panel.", "year": "2024"}, {"id": "driptech", "label": "DripTech", "type": "p", "cat": "hw", "featured": false, "sum": "A sensor-driven drip-irrigation system with an app for remote tracking and control, developed with effectuation and design thinking.", "year": "2024–25"}, {"id": "alu", "label": "2-Bit ALU & Control Unit", "type": "p", "cat": "hw", "featured": false, "sum": "An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.", "year": "2024"}, {"id": "amplifier", "label": "Two-Stage BJT Amplifier", "type": "p", "cat": "hw", "featured": false, "sum": "A cascaded common-emitter amplifier with 2N3904 transistors, analysed by hand and checked in simulation.", "year": "2024"}, {"id": "lighting-design", "label": "Lighting Scheme Design", "type": "p", "cat": "power", "featured": false, "sum": "Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.", "year": "2024"}, {"id": "humanoid-robot", "label": "Humanoid Robot CAD", "type": "p", "cat": "cad", "featured": false, "sum": "A fully articulated humanoid robot modelled in SOLIDWORKS, with exploded views and first-angle engineering drawings for every part.", "year": "2023"}, {"id": "semester-planner", "label": "Semester Planner in C", "type": "p", "cat": "sw", "featured": false, "sum": "A student-activity planner with four user roles, file-based storage and progress reports.", "year": "2023"}, {"id": "s:ESP32 firmware", "label": "ESP32 firmware", "type": "s"}, {"id": "s:Sensors & calibration", "label": "Sensors & calibration", "type": "s"}, {"id": "s:IoT & Firebase", "label": "IoT & Firebase", "type": "s"}, {"id": "s:Flutter / Dart", "label": "Flutter / Dart", "type": "s"}, {"id": "s:Next.js", "label": "Next.js", "type": "s"}, {"id": "s:Python", "label": "Python", "type": "s"}, {"id": "s:FastAPI", "label": "FastAPI", "type": "s"}, {"id": "s:Machine learning", "label": "Machine learning", "type": "s"}, {"id": "s:Computer vision", "label": "Computer vision", "type": "s"}, {"id": "s:LLMs & agents", "label": "LLMs & agents", "type": "s"}, {"id": "s:MATLAB", "label": "MATLAB", "type": "s"}, {"id": "s:Simulink", "label": "Simulink", "type": "s"}, {"id": "s:Signal processing", "label": "Signal processing", "type": "s"}, {"id": "s:LabVIEW", "label": "LabVIEW", "type": "s"}, {"id": "s:Power systems", "label": "Power systems", "type": "s"}, {"id": "s:Power electronics", "label": "Power electronics", "type": "s"}, {"id": "s:ETAP", "label": "ETAP", "type": "s"}, {"id": "s:Circuit design", "label": "Circuit design", "type": "s"}, {"id": "s:Multisim / LTspice", "label": "Multisim / LTspice", "type": "s"}, {"id": "s:SOLIDWORKS & 3D print", "label": "SOLIDWORKS & 3D print", "type": "s"}, {"id": "s:AutoCAD & Relux", "label": "AutoCAD & Relux", "type": "s"}, {"id": "s:C / C++", "label": "C / C++", "type": "s"}, {"id": "s:Team leadership", "label": "Team leadership", "type": "s"}, {"id": "s:Pitching & product", "label": "Pitching & product", "type": "s"}], "links": [{"s": "s:ESP32 firmware", "t": "wave"}, {"s": "s:ESP32 firmware", "t": "agrhi-iot"}, {"s": "s:ESP32 firmware", "t": "smart-hospital"}, {"s": "s:ESP32 firmware", "t": "bringup"}, {"s": "s:Sensors & calibration", "t": "wave"}, {"s": "s:Sensors & calibration", "t": "agrhi-iot"}, {"s": "s:Sensors & calibration", "t": "smart-hospital"}, {"s": "s:IoT & Firebase", "t": "wave"}, {"s": "s:IoT & Firebase", "t": "agrhi-iot"}, {"s": "s:IoT & Firebase", "t": "reciperun"}, {"s": "s:IoT & Firebase", "t": "smart-hospital"}, {"s": "s:Flutter / Dart", "t": "agrhi-iot"}, {"s": "s:Flutter / Dart", "t": "reciperun"}, {"s": "s:Flutter / Dart", "t": "trustport"}, {"s": "s:Next.js", "t": "wave"}, {"s": "s:Python", "t": "trustport"}, {"s": "s:Python", "t": "medical-imaging"}, {"s": "s:Python", "t": "diabetes-predictor"}, {"s": "s:Python", "t": "bringup"}, {"s": "s:Python", "t": "smart-hospital"}, {"s": "s:FastAPI", "t": "wave"}, {"s": "s:FastAPI", "t": "trustport"}, {"s": "s:Machine learning", "t": "wave"}, {"s": "s:Machine learning", "t": "medical-imaging"}, {"s": "s:Machine learning", "t": "diabetes-predictor"}, {"s": "s:Machine learning", "t": "dsm-fuzzy"}, {"s": "s:Computer vision", "t": "medical-imaging"}, {"s": "s:Computer vision", "t": "trustport"}, {"s": "s:LLMs & agents", "t": "trustport"}, {"s": "s:LLMs & agents", "t": "reciperun"}, {"s": "s:LLMs & agents", "t": "bringup"}, {"s": "s:MATLAB", "t": "speech-enhancement"}, {"s": "s:MATLAB", "t": "piezo-harvester"}, {"s": "s:MATLAB", "t": "dsm-fuzzy"}, {"s": "s:MATLAB", "t": "smart-energy-meter"}, {"s": "s:MATLAB", "t": "driptech"}, {"s": "s:MATLAB", "t": "epsscom"}, {"s": "s:Simulink", "t": "piezo-harvester"}, {"s": "s:Simulink", "t": "dsm-fuzzy"}, {"s": "s:Signal processing", "t": "speech-enhancement"}, {"s": "s:Signal processing", "t": "smart-hospital"}, {"s": "s:Signal processing", "t": "wave"}, {"s": "s:LabVIEW", "t": "hydro-labview"}, {"s": "s:Power systems", "t": "epsscom"}, {"s": "s:Power systems", "t": "dsm-fuzzy"}, {"s": "s:Power systems", "t": "hydro-labview"}, {"s": "s:Power systems", "t": "lighting-design"}, {"s": "s:Power electronics", "t": "piezo-harvester"}, {"s": "s:Power electronics", "t": "wave"}, {"s": "s:ETAP", "t": "epsscom"}, {"s": "s:Circuit design", "t": "alu"}, {"s": "s:Circuit design", "t": "amplifier"}, {"s": "s:Circuit design", "t": "smart-hospital"}, {"s": "s:Multisim / LTspice", "t": "alu"}, {"s": "s:Multisim / LTspice", "t": "amplifier"}, {"s": "s:SOLIDWORKS & 3D print", "t": "humanoid-robot"}, {"s": "s:SOLIDWORKS & 3D print", "t": "wave"}, {"s": "s:AutoCAD & Relux", "t": "lighting-design"}, {"s": "s:C / C++", "t": "semester-planner"}, {"s": "s:C / C++", "t": "smart-hospital"}, {"s": "s:C / C++", "t": "wave"}, {"s": "s:C / C++", "t": "agrhi-iot"}, {"s": "s:Team leadership", "t": "wave"}, {"s": "s:Team leadership", "t": "medical-imaging"}, {"s": "s:Team leadership", "t": "smart-hospital"}, {"s": "s:Team leadership", "t": "alu"}, {"s": "s:Team leadership", "t": "amplifier"}, {"s": "s:Team leadership", "t": "humanoid-robot"}, {"s": "s:Team leadership", "t": "semester-planner"}, {"s": "s:Pitching & product", "t": "wave"}, {"s": "s:Pitching & product", "t": "driptech"}, {"s": "s:Pitching & product", "t": "reciperun"}, {"s": "s:Pitching & product", "t": "trustport"}]}</script>
+    </section>
+
+    <section class="archive" id="archive" aria-labelledby="archive-title" data-shape="torus" data-x="-0.6" data-y="0" data-o="0.35" data-s="0.9">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Archive</p>
+      <h2 id="archive-title">Coursework &amp; side projects</h2>
+      <p class="lede">14 more projects, with details and figures taken from my reports.</p>
+      <div class="filters" role="group" aria-label="Filter projects"><button aria-pressed="true" data-filter="all">All</button><button aria-pressed="false" data-filter="hw">Hardware &amp; Embedded</button><button aria-pressed="false" data-filter="ai">AI &amp; Data</button><button aria-pressed="false" data-filter="sw">Software</button><button aria-pressed="false" data-filter="power">Power &amp; Simulation</button><button aria-pressed="false" data-filter="cad">Design &amp; CAD</button></div>
+      <ul class="grid" aria-live="polite">
+        <li class="card tilt" data-cat="ai" style="view-transition-name:c-medical-imaging">
+          <a href="projects/medical-imaging.html">
+            <div class="card-media"><img src="assets/img/medical-imaging/retina-lesions.webp" alt="" width="1400" height="744" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Machine Vision &amp; Intelligence</p>
+              <h3>Multi-Model Medical Imaging</h3>
+              <p>Classical machine vision against deep learning on medical images, with four team-built models joined into one desktop app.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="hw" style="view-transition-name:c-smart-hospital">
+          <a href="projects/smart-hospital.html">
+            <div class="card-media"><img src="assets/img/smart-hospital/ecg-live.webp" alt="" width="920" height="667" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Microprocessor Systems &amp; Embedded Software</p>
+              <h3>Smart Hospital System</h3>
+              <p>A bedside unit that reads heart rate, SpO₂, temperature and ECG, alarms on abnormal readings and streams to a central Python dashboard.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="ai sw" style="view-transition-name:c-speech-enhancement">
+          <a href="projects/speech-enhancement.html">
+            <div class="card-media"><img src="assets/img/speech-enhancement/spectrogram.webp" alt="" width="797" height="293" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Digital Signal Processing</p>
+              <h3>Speech Enhancement Studio</h3>
+              <p>A MATLAB app that adds realistic noise to speech, cleans it with four algorithms or a mix of them, and compares the results.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="power" style="view-transition-name:c-piezo-harvester">
+          <a href="projects/piezo-harvester.html">
+            <div class="card-media"><img src="assets/img/piezo-harvester/simulink-bp.webp" alt="" width="1800" height="854" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Power Electronics &amp; Drives</p>
+              <h3>Piezoelectric Energy Harvester</h3>
+              <p>A simulated inductorless P-SSHC harvesting interface that beats a standard full-bridge rectifier.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="power ai" style="view-transition-name:c-dsm-fuzzy">
+          <a href="projects/dsm-fuzzy.html">
+            <div class="card-media"><img src="assets/img/dsm-fuzzy/surface-time.webp" alt="" width="1209" height="875" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Generation, Transmission &amp; Distribution of Electrical Power</p>
+              <h3>Fuzzy-Logic Demand-Side Management</h3>
+              <p>A Mamdani fuzzy controller that adjusts household power use by time of day, resident type and current demand, simulated in Simulink.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="ai sw" style="view-transition-name:c-diabetes-predictor">
+          <a href="projects/diabetes-predictor.html">
+            <div class="card-media"><img src="assets/img/diabetes-predictor/model-comparison.webp" alt="" width="989" height="590" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2025 · Rocheston Certified AI Engineer programme</p>
+              <h3>Diabetes Risk Predictor</h3>
+              <p>Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="sw power" style="view-transition-name:c-smart-energy-meter">
+          <a href="projects/smart-energy-meter.html">
+            <div class="card-media"><img src="assets/img/smart-energy-meter/home.webp" alt="" width="1400" height="862" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024 · Engineering Software &amp; Applications (MATLAB)</p>
+              <h3>Smart Energy Monitor</h3>
+              <p>An app that tracks household devices, charts power use and cost, and gives energy-saving recommendations.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="power sw" style="view-transition-name:c-hydro-labview">
+          <a href="projects/hydro-labview.html">
+            <div class="card-media"><img src="assets/img/hydro-labview/turbines.webp" alt="" width="1623" height="826" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024 · Engineering Software &amp; Applications (LabVIEW)</p>
+              <h3>Hydroelectric Plant Simulation</h3>
+              <p>A live LabVIEW model of a hydro plant: water flow, turbine efficiency, environmental impact and revenue, with event logging and a remote web panel.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="hw sw" style="view-transition-name:c-driptech">
+          <a href="projects/driptech.html">
+            <div class="card-media"><img src="assets/img/driptech/control.webp" alt="" width="380" height="603" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024–25 · Technopreneurship (TeChSIE)</p>
+              <h3>DripTech</h3>
+              <p>A sensor-driven drip-irrigation system with an app for remote tracking and control, developed with effectuation and design thinking.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="hw" style="view-transition-name:c-alu">
+          <a href="projects/alu.html">
+            <div class="card-media"><img src="assets/img/alu/sim-201.webp" alt="" width="1333" height="646" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024 · Digital Electronics</p>
+              <h3>2-Bit ALU &amp; Control Unit</h3>
+              <p>An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="hw" style="view-transition-name:c-amplifier">
+          <a href="projects/amplifier.html">
+            <div class="card-media"><img src="assets/img/amplifier/schematic-bp.webp" alt="" width="1267" height="700" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024 · Analogue Electronics</p>
+              <h3>Two-Stage BJT Amplifier</h3>
+              <p>A cascaded common-emitter amplifier with 2N3904 transistors, analysed by hand and checked in simulation.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="power cad" style="view-transition-name:c-lighting-design">
+          <a href="projects/lighting-design.html">
+            <div class="card-media"><img src="assets/img/lighting-design/literature.webp" alt="" width="1180" height="792" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2024 · Electrical Power Utilisation</p>
+              <h3>Lighting Scheme Design</h3>
+              <p>Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="cad" style="view-transition-name:c-humanoid-robot">
+          <a href="projects/humanoid-robot.html">
+            <div class="card-media"><img src="assets/img/humanoid-robot/assembly.webp" alt="" width="828" height="765" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2023 · Engineering Design</p>
+              <h3>Humanoid Robot CAD</h3>
+              <p>A fully articulated humanoid robot modelled in SOLIDWORKS, with exploded views and first-angle engineering drawings for every part.</p>
+            </div>
+          </a>
+        </li>
+        <li class="card tilt" data-cat="sw" style="view-transition-name:c-semester-planner">
+          <a href="projects/semester-planner.html">
+            <div class="card-media"><img src="assets/img/semester-planner/report.webp" alt="" width="1417" height="838" loading="lazy"><span class="glare" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <p class="card-meta">2023 · Introduction to C Programming</p>
+              <h3>Semester Planner in C</h3>
+              <p>A student-activity planner with four user roles, file-based storage and progress reports.</p>
+            </div>
+          </a>
+        </li>
       </ul>
     </section>
 
-    <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Smart Hospital – ESP32-based IoT patient monitoring</li>
-        <li>Retinal Fundus Disease Detection – deep learning with RFMiD dataset</li>
-        <li>Speech Enhancement App – MATLAB GUI for noisy speech processing</li>
-        <li>Piezoelectric Energy Harvesting – P-SSHC topology for self-powered devices</li>
-      </ul>
+    <section class="recognition split" id="recognition" aria-labelledby="rec-title" data-shape="galaxy" data-x="0.55" data-y="0" data-o="0.6" data-s="1">
+      <figure class="win-photo reveal zoomable"><img src="assets/img/profile/trophy.webp" alt="AgriXcelerate 2026 Grand Champion trophy, cheque and certificates" width="768" height="1020" loading="lazy"><figcaption>AgriXcelerate 2026 · Grand Champion</figcaption></figure>
+      <div class="split-text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Recognition</p>
+        <h2 id="rec-title">Awards &amp; credentials</h2>
+        <ul class="recs">
+          <li class="rec reveal rec-top"><p class="rec-k">Award · 2026</p><h3>Grand Champion</h3><p>AgriXcelerate 2026, university category, with W.A.V.E.</p></li>
+          <li class="rec reveal"><p class="rec-k">Research · 2026</p><h3>Lead author</h3><p>“IoT Design for Automated Plant Monitoring and Fertigation Management”: paper and book chapter.</p></li>
+          <li class="rec reveal"><p class="rec-k">Competition · 2026</p><h3>EPSSCOM 2026</h3><p>Representing APU at IEEE PES Malaysia&#x27;s national power-system simulation competition.</p></li>
+          <li class="rec reveal"><p class="rec-k">Certification · 2025</p><h3>Rocheston Certified AI Engineer</h3><p>RCAI programme, APU, April–September 2025.</p></li>
+          <li class="rec reveal"><p class="rec-k">Certification</p><h3>Microsoft Azure AI Fundamentals</h3><p>Core AI workloads and Azure AI services.</p></li>
+          <li class="rec reveal"><p class="rec-k">Hackathons · 2025–26</p><h3>Four global hackathons</h3><p>VisaVerse, RevenueCat Shipyard, ERNIE AI Developer Challenge, Nebius × NVIDIA.</p></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Achievements -->
-    <section class="achievements" id="achievements">
-      <h2>Achievements & Certificates</h2>
-      <p>Some of my milestones include hackathon participation, technical certifications, and academic awards. Certificates can be viewed <a href="certificates.html">here</a>.</p>
+    <section class="experience split rev" id="experience" aria-labelledby="exp-title" data-shape="helix" data-x="-0.55" data-y="0" data-o="0.45" data-s="0.9">
+      <div class="split-text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Experience</p>
+        <h2 id="exp-title">Where I've worked</h2>
+        <div class="edu reveal"><p class="rec-k">Education · March 2023 – present</p><h3>Bachelor of Electrical &amp; Electronic Engineering (Hons)</h3><p>Asia Pacific University of Technology &amp; Innovation, Kuala Lumpur</p></div>
+      </div>
+      <ol class="timeline">
+          <li class="t-item reveal"><p class="t-when">May 2026 – Feb 2027</p><h3>Part-time Student Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Developing and maintaining the Autopot monitoring and fertigation IoT systems I built as a full-time intern.</li></ul></li>
+          <li class="t-item reveal"><p class="t-when">2025 – 2026</p><h3>Electrical &amp; Electronic Engineering Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Engineered a dual-system IoT solution for monitoring and fertigation using ESP32 and ADS1115.</li><li>Built a Flutter + Firebase dashboard for real-time pH, EC and moisture tracking.</li><li>Wrote the scheduling and manual-override logic for automated nutrient and water delivery.</li><li>Ran a 30-day trial and wrote the research paper on it.</li></ul></li>
+          <li class="t-item reveal"><p class="t-when">2023 – present</p><h3>BEng (Hons) Student &amp; Project Group Leader</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><ul><li>Led group projects every year, from C programming and SOLIDWORKS to digital logic, smart-hospital hardware and multi-model medical AI.</li><li>Grand Champion at AgriXcelerate 2026. Representing APU at EPSSCOM 2026.</li></ul></li>
+          <li class="t-item reveal"><p class="t-when">2025</p><h3>Document Editor &amp; Proofreader</h3><p class="t-org">SureTrack Logistics</p><ul><li>Edited and proofread technical documents for accuracy, clarity and consistency, following each client&#x27;s style guide.</li></ul></li>
+      </ol>
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <h2>Get In Touch</h2>
-      <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <section class="contact split" id="contact" aria-labelledby="contact-title" data-shape="sphere" data-x="0.5" data-y="0" data-o="1" data-s="1">
+      <div class="split-text reveal">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Contact</p>
+        <h2 id="contact-title">Let's build something that works in the field.</h2>
+        <p class="lede">I'm looking for internships and graduate roles in embedded systems, IoT, AI engineering and power. I'm based in Kuala Lumpur.</p>
+        <a class="email" href="mailto:chisomo.mbewe04@gmail.com">chisomo.mbewe04@gmail.com</a>
+        <div class="cta">
+          <button class="btn copy magnetic" type="button" data-copy="chisomo.mbewe04@gmail.com">Copy email</button>
+          <a class="btn btn-grad magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn magnetic" href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn magnetic" href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="split-visual"><div class="orb-slot" data-anchor data-k="1.05"></div></div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Your Name | <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> | <a href="https://github.com/yourusername">GitHub</a></p>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
-  <script src="script.js"></script>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
 </body>
 </html>
