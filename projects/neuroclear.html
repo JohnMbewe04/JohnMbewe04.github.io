@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NeuroClear · Chisomo Mbewe</title>
+  <meta name="description" content="Smart glasses that watch for mental fatigue, poor neck posture, digital eye strain and nearby obstacles. All processing happens on the glasses, and alerts arrive through bone conduction or a companion app.">
+  <meta name="theme-color" content="#eaf6fd">
+  <meta property="og:title" content="NeuroClear · Chisomo Mbewe">
+  <meta property="og:description" content="Smart glasses that watch for mental fatigue, poor neck posture, digital eye strain and nearby obstacles. All processing happens on the glasses, and alerts arrive through bone conduction or a companion app.">
+  <meta property="og:image" content="../assets/img/neuroclear/concept.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23eaf6fd'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%231c4e75' stroke-width='2.5'/%3E%3Cpath d='M32 14 42 32 32 50 22 32Z' fill='%232fa0c6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=6ae9ba5e">
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('veil')) document.documentElement.classList.add('no-veil'); sessionStorage.setItem('veil', '1'); } catch (e) {}
+    if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
+  </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script src="../main.js?v=6ae9ba5e" defer></script>
+  <script type="module" src="../bg.js?v=6ae9ba5e"></script>
+</head>
+<body>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+    <radialGradient id="gm-orb" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#bde5ff"/><stop offset=".55" stop-color="#58c9f3"/><stop offset=".85" stop-color="#2fa0c6"/><stop offset="1" stop-color="#1c4e75"/></radialGradient>
+    <linearGradient id="gm-metal" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#dcecf6"/><stop offset=".6" stop-color="#93b8cf"/><stop offset=".8" stop-color="#e9f5fc"/><stop offset="1" stop-color="#7fa6c0"/></linearGradient>
+    <radialGradient id="gm-glow"><stop offset="0" stop-color="#58c9f3" stop-opacity=".55"/><stop offset=".6" stop-color="#58c9f3" stop-opacity=".12"/><stop offset="1" stop-color="#58c9f3" stop-opacity="0"/></radialGradient>
+    <linearGradient id="am-sheen" gradientUnits="userSpaceOnUse" x1="-110" y1="-125" x2="110" y2="115"><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset=".65" stop-color="#fff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-220 -240;220 240;220 240" keyTimes="0;.45;1" dur="6s" repeatCount="indefinite"/></linearGradient>
+    <g id="am-sil"><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/><path d="M0,-60L9,-80L0,-118L-9,-80Z"/><path d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/><path d="M0,60L9,77L0,102L-9,77Z"/><circle r="64.5"/><circle cy="-124" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/></g>
+    <pattern id="rope-twist" patternUnits="userSpaceOnUse" width="3.4" height="3.2" patternTransform="skewY(-40)"><rect width="3.4" height="3.2" fill="#2a6a93"/><rect width="3.4" height="1.5" fill="#6fb6dc"/><rect y="1.5" width="3.4" height=".35" fill="#123a58"/></pattern>
+    <linearGradient id="rope-round" gradientUnits="userSpaceOnUse" x1="-1.7" y1="0" x2="1.7" y2="0"><stop offset="0" stop-color="#061826" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity=".28"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#061826" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="ec-wave" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fa0c6" stop-opacity=".15"/><stop offset=".5" stop-color="#58c9f3" stop-opacity=".55"/><stop offset="1" stop-color="#2fa0c6" stop-opacity=".15"/></linearGradient>
+    <linearGradient id="ec-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fa0c6" stop-opacity="0"/><stop offset=".5" stop-color="#2fa0c6"/><stop offset="1" stop-color="#2fa0c6" stop-opacity="0"/></linearGradient>
+  </defs></svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#origin">About</a><a href="../index.html#seals">Certificates</a><a href="../index.html#echoes">Beyond work</a><a href="../index.html#contact">Contact</a></nav>
+    <button class="sfx-btn" type="button" aria-pressed="true" aria-label="Interface sounds" title="Interface sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="sfx-on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="sfx-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+    <a class="btn btn-sm btn-fill"href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#origin">About</a><a href="../index.html#seals">Certificates</a><a href="../index.html#echoes">Beyond work</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <main id="main" class="pj">
+    <section class="pj-head split" data-shape="seal" data-x="0.5" data-y="0" data-o="0.45" data-s="0.95">
+      <div class="split-text">
+        <a class="back" href="../index.html#now">← The current chapter</a>
+        <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span class="pj-tags"><a href="../index.html#archive">Hardware &amp; Embedded</a><a href="../index.html#archive">AI &amp; Data</a><a href="../index.html#archive">Software</a></span></div>
+        <h1>NeuroClear</h1>
+        <p class="slide-kicker">Multi-sensor wellness glasses with edge AI</p>
+        <p class="lede">Smart glasses that watch for mental fatigue, poor neck posture, digital eye strain and nearby obstacles. All processing happens on the glasses, and alerts arrive through bone conduction or a companion app.</p>
+      </div>
+      <figure class="pj-visual frame zoomable"><img src="../assets/img/neuroclear/concept.webp" alt="Smart glasses that watch for mental fatigue, poor neck posture, digital eye strain and nearby obstacles. All processing happens on the glasses, and alerts arrive through bone conduction or a companion app." width="1344" height="768" fetchpriority="high"></figure>
+    </section>
+    <section class="pj-meta-wrap"><dl class="pj-meta glass frame"><div><dt>Outcome</dt><dd>Final year project · in progress</dd></div><div><dt>Role</dt><dd>Everything: hardware, PCB design, firmware, the AI pipeline, the companion app and the mechanical clip-on</dd></div><div><dt>Year</dt><dd>2025–26</dd></div><div><dt>Team</dt><dd>Individual final year project</dd></div><div><dt>Context</dt><dd>BEng (Hons) Electrical &amp; Electronic Engineering final year project, APU.</dd></div></dl></section>
+    <section class="pj-body" data-shape="seal" data-x="0.6" data-y="0" data-o="0.2" data-s="0.8">
+      <div class="pj-main">
+        <h2>Overview</h2>
+        <p>Long days at a screen bring three problems together: mental fatigue, forward head posture and digital eye strain. Consumer tools tackle them one at a time, each with its own gadget, and many send data to the cloud. I couldn&#x27;t find a published system that watches all three from a single pair of glasses.</p><p>NeuroClear builds on published wearable-EEG glasses research. Dry electrodes at F7, T7, F8 and T8 read brain activity, a 6-axis IMU tracks neck angle, an IR sensor counts blinks and a multizone time-of-flight sensor watches for obstacles ahead. Everything runs on an ESP32-S3, so no data has to leave the glasses.</p><p>Alerts go to a bone-conduction transducer on the frame, the companion app, or both, chosen per alert. With bone conduction and the obstacle sensor together, the glasses also work as an obstacle warning for people with low vision.</p>
+        <h2>What I did</h2>
+        <ol class="did"><li><span class="did-n">01</span><span>Designed three custom PCBs in KiCad. The MCU temple board carries the ESP32-S3 module, IMU, fuel gauge and audio amplifier. The analogue front-end uses an ADS1299-4. The front sensor board carries the VL53L5CX multizone ToF and APDS-9960 blink sensor.</span></li><li><span class="did-n">02</span><span>Simulated the EEG channel, bias drive and power path before layout, then brought the boards up. With inputs shorted, the noise floor measured 0.13–0.15 µVrms, which matches the ADS1299 datasheet.</span></li><li><span class="did-n">03</span><span>Built the EEG pipeline in Python, reproducing a published workload classifier: causal filters, blink detection and removal, 17 features per channel, RFECV feature selection and a 200-tree Random Forest. I then ported it to C for the ESP32.</span></li><li><span class="did-n">04</span><span>Built the Flutter companion app for Android, iOS and web. It has a live 3D view of the head with the glasses and electrodes, a 3D view of the surroundings from the 8×8 ToF zones, history trends, a secured BLE protocol, calibration, research data-collection modes and a built-in simulator.</span></li><li><span class="did-n">05</span><span>Designed a 3D-printed clip-on, revised from Rev A to Rev C, that mounts the electronics on a standard 140 mm glasses frame.</span></li></ol>
+        <h2>Signal path</h2>
+        <ol class="flow" aria-label="Signal path"><li style="--i:0"><span>Dry EEG electrodes</span></li><li style="--i:1"><span>ADS1299 AFE</span></li><li style="--i:2"><span>ESP32-S3</span></li><li style="--i:3"><span>Filters &amp; blink removal</span></li><li style="--i:4"><span>Random Forest + fusion</span></li><li style="--i:5"><span>BLE</span></li><li style="--i:6"><span>App · bone conduction</span></li></ol>
+        <h2>Next steps</h2><p>The project is now in its evaluation stage. I&#x27;m measuring classification accuracy, alert reliability, latency and battery life on the glasses, and the results will go into the final report.</p>
+      </div>
+      <aside class="pj-side">
+        <div class="panel glass frame"><p class="panel-h">Results</p><div class="res"><p class="res-v">0.14 µVrms</p><p class="res-l">measured EEG noise floor at bring-up, matching the ADS1299 datasheet</p></div><div class="res"><p class="res-v">3 PCBs</p><p class="res-l">custom boards in KiCad: MCU, analogue front-end and front sensor</p></div><div class="res"><p class="res-v">5</p><p class="res-l">modalities in one frame: EEG, posture, blink, obstacle range and bone-conduction audio</p></div><div class="res"><p class="res-v">On-device</p><p class="res-l">AI: nothing has to leave the glasses</p></div></div>
+        <div class="panel glass frame"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>ESP32-S3</span><span>ADS1299</span><span>KiCad</span><span>ICM-42607 IMU</span><span>VL53L5CX ToF</span><span>APDS-9960</span><span>MAX98357A</span><span>Python</span><span>scikit-learn</span><span>C</span><span>Flutter</span><span>BLE</span><span>3D printing</span></p></div>
+        
+      </aside>
+    </section>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="seal" data-x="-0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <p class="ch-kicker"><span class="kd" aria-hidden="true"></span>Gallery · 18 images</p>
+      <h2 id="gal-title">A closer look</h2>
+      <div class="gal"><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/mcu-iso.webp" alt="MCU temple board (PCB1): ESP32-S3 module, USB-C, IMU, fuel gauge and audio amplifier." width="1600" height="756" loading="lazy"><figcaption>MCU temple board (PCB1): ESP32-S3 module, USB-C, IMU, fuel gauge and audio amplifier.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/afe-iso.webp" alt="Analogue front-end (PCB2): ADS1299-4 for the four EEG channels." width="1600" height="759" loading="lazy"><figcaption>Analogue front-end (PCB2): ADS1299-4 for the four EEG channels.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/sensor-iso.webp" alt="Front sensor board (PCB3): multizone ToF on top, blink sensor underneath." width="1300" height="830" loading="lazy"><figcaption>Front sensor board (PCB3): multizone ToF on top, blink sensor underneath.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/mcu-top.webp" alt="MCU board, top view." width="1600" height="433" loading="lazy"><figcaption>MCU board, top view.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/afe-top.webp" alt="Analogue front-end, top view, with the electrode pads." width="1600" height="425" loading="lazy"><figcaption>Analogue front-end, top view, with the electrode pads.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/sensor-top.webp" alt="Front sensor board, top view." width="900" height="722" loading="lazy"><figcaption>Front sensor board, top view.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/clipon-frame.webp" alt="Clip-on Rev C on a generic frame: blue and purple pods hold the boards." width="1390" height="1005" loading="lazy"><figcaption>Clip-on Rev C on a generic frame: blue and purple pods hold the boards.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/clipon-exploded.webp" alt="One side of the clip-on, exploded." width="1390" height="1005" loading="lazy"><figcaption>One side of the clip-on, exploded.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/app-dashboard.webp" alt="Companion app: live neural-state view with the electrodes on the glasses." width="1600" height="1000" loading="lazy"><figcaption>Companion app: live neural-state view with the electrodes on the glasses.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/app-fatigued.webp" alt="The same view when the user is fatigued and an obstacle is close." width="1500" height="967" loading="lazy"><figcaption>The same view when the user is fatigued and an obstacle is close.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/app-surroundings.webp" alt="Surroundings view: obstacles from the 8×8 time-of-flight zones, in 3D." width="1600" height="1000" loading="lazy"><figcaption>Surroundings view: obstacles from the 8×8 time-of-flight zones, in 3D.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/app-history.webp" alt="History: time in each state, neck angle and blink-rate trends." width="1600" height="1000" loading="lazy"><figcaption>History: time in each state, neck angle and blink-rate trends.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/app-light.webp" alt="Light theme." width="1440" height="900" loading="lazy"><figcaption>Light theme.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/phone-dashboard.webp" alt="Phone layout: dashboard." width="520" height="1125" loading="lazy"><figcaption>Phone layout: dashboard.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/phone-history.webp" alt="Phone layout: history." width="520" height="1125" loading="lazy"><figcaption>Phone layout: history.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/phone-device.webp" alt="Phone layout: device and link details." width="520" height="1125" loading="lazy"><figcaption>Phone layout: device and link details.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/blink-pipeline.webp" alt="AI pipeline: blink detection and removal on the frontal EEG channel." width="1400" height="980" loading="lazy"><figcaption>AI pipeline: blink detection and removal on the frontal EEG channel.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/neuroclear/eeg-alpha.webp" alt="Bring-up: eyes-open versus eyes-closed alpha test." width="1300" height="450" loading="lazy"><figcaption>Bring-up: eyes-open versus eyes-closed alpha test.</figcaption></figure></div>
+    </section>
+    <nav class="pj-nav" aria-label="More projects">
+      <a href="semester-planner.html" class="glass frame tilt"><span>← Previous</span><strong>Semester Planner in C</strong></a>
+      <a href="wave.html" class="glass frame tilt pj-nav-next"><span>Next →</span><strong>W.A.V.E</strong></a>
+    </nav>
+  </main>
+  <footer class="footer">
+    <p>© 2026 Chisomo Mbewe · Kuala Lumpur</p>
+    <p><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a> · <a href="mailto:chisomo.mbewe04@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+  <dialog class="lightbox" aria-label="Image viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">←</button>
+    <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">→</button>
+  </dialog>
+</body>
+</html>

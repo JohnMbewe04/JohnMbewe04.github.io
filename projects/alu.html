@@ -5,49 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>2-Bit ALU &amp; Control Unit · Chisomo Mbewe</title>
   <meta name="description" content="An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.">
-  <meta name="theme-color" content="#04050a">
+  <meta name="theme-color" content="#eaf6fd">
   <meta property="og:title" content="2-Bit ALU &amp; Control Unit · Chisomo Mbewe">
   <meta property="og:description" content="An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.">
   <meta property="og:image" content="../assets/img/alu/sim-201.webp">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23eaf6fd'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%231c4e75' stroke-width='2.5'/%3E%3Cpath d='M32 14 42 32 32 50 22 32Z' fill='%232fa0c6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=6ae9ba5e">
   <script>
     document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('veil')) document.documentElement.classList.add('no-veil'); sessionStorage.setItem('veil', '1'); } catch (e) {}
     if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
   </script>
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
-  <script src="../main.js" defer></script>
-  <script type="module" src="../bg.js"></script>
+  <script src="../main.js?v=6ae9ba5e" defer></script>
+  <script type="module" src="../bg.js?v=6ae9ba5e"></script>
 </head>
 <body>
   <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+    <radialGradient id="gm-orb" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#bde5ff"/><stop offset=".55" stop-color="#58c9f3"/><stop offset=".85" stop-color="#2fa0c6"/><stop offset="1" stop-color="#1c4e75"/></radialGradient>
+    <linearGradient id="gm-metal" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#dcecf6"/><stop offset=".6" stop-color="#93b8cf"/><stop offset=".8" stop-color="#e9f5fc"/><stop offset="1" stop-color="#7fa6c0"/></linearGradient>
+    <radialGradient id="gm-glow"><stop offset="0" stop-color="#58c9f3" stop-opacity=".55"/><stop offset=".6" stop-color="#58c9f3" stop-opacity=".12"/><stop offset="1" stop-color="#58c9f3" stop-opacity="0"/></radialGradient>
+    <linearGradient id="am-sheen" gradientUnits="userSpaceOnUse" x1="-110" y1="-125" x2="110" y2="115"><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset=".65" stop-color="#fff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-220 -240;220 240;220 240" keyTimes="0;.45;1" dur="6s" repeatCount="indefinite"/></linearGradient>
+    <g id="am-sil"><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/><path d="M0,-60L9,-80L0,-118L-9,-80Z"/><path d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/><path d="M0,60L9,77L0,102L-9,77Z"/><circle r="64.5"/><circle cy="-124" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/></g>
+    <pattern id="rope-twist" patternUnits="userSpaceOnUse" width="3.4" height="3.2" patternTransform="skewY(-40)"><rect width="3.4" height="3.2" fill="#2a6a93"/><rect width="3.4" height="1.5" fill="#6fb6dc"/><rect y="1.5" width="3.4" height=".35" fill="#123a58"/></pattern>
+    <linearGradient id="rope-round" gradientUnits="userSpaceOnUse" x1="-1.7" y1="0" x2="1.7" y2="0"><stop offset="0" stop-color="#061826" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity=".28"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#061826" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="ec-wave" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fa0c6" stop-opacity=".15"/><stop offset=".5" stop-color="#58c9f3" stop-opacity=".55"/><stop offset="1" stop-color="#2fa0c6" stop-opacity=".15"/></linearGradient>
+    <linearGradient id="ec-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fa0c6" stop-opacity="0"/><stop offset=".5" stop-color="#2fa0c6"/><stop offset="1" stop-color="#2fa0c6" stop-opacity="0"/></linearGradient>
+  </defs></svg>
   <a class="skip" href="#main">Skip to content</a>
   <div class="progress" aria-hidden="true"></div>
   <header class="nav">
-    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a></nav>
-    <a class="btn btn-sm btn-grad" href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <a class="brand" href="../index.html" aria-label="Chisomo Mbewe, home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    
+    <nav class="nav-links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#origin">About</a><a href="../index.html#seals">Certificates</a><a href="../index.html#echoes">Beyond work</a><a href="../index.html#contact">Contact</a></nav>
+    <button class="sfx-btn" type="button" aria-pressed="true" aria-label="Interface sounds" title="Interface sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="sfx-on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="sfx-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+    <a class="btn btn-sm btn-fill"href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
   </header>
-  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#archive">Archive</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="../index.html#work">Work</a><a href="../index.html#origin">About</a><a href="../index.html#seals">Certificates</a><a href="../index.html#echoes">Beyond work</a><a href="../index.html#contact">Contact</a><a href="../assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
   <main id="main" class="pj">
-    <section class="pj-head split" data-shape="circuit" data-x="0.5" data-y="0" data-o="0.5" data-s="0.95">
+    <section class="pj-head split" data-shape="circuit" data-x="0.5" data-y="0" data-o="0.45" data-s="0.95">
       <div class="split-text">
-        <a class="back" href="../index.html#archive">← Archive</a>
+        <a class="back" href="../index.html#archive">← Side quests</a>
         <div class="slide-meta"><span class="state"><i></i>Completed</span><span class="pj-tags"><a href="../index.html#archive">Hardware &amp; Embedded</a></span></div>
         <h1>2-Bit ALU &amp; Control Unit</h1>
         <p class="slide-kicker">Combinational logic from an equation</p>
         <p class="lede">An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.</p>
       </div>
-      <figure class="pj-visual zoomable"><img src="../assets/img/alu/sim-201.webp" alt="An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard." width="1333" height="646" fetchpriority="high"></figure>
+      <figure class="pj-visual frame zoomable"><img src="../assets/img/alu/sim-201.webp" alt="An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard." width="1333" height="646" fetchpriority="high"></figure>
     </section>
-    <section class="pj-meta-wrap"><dl class="pj-meta"><div><dt>Role</dt><dd>Group leader. Built my own ALU and compiled the group design</dd></div><div><dt>Year</dt><dd>2024</dd></div><div><dt>Team</dt><dd>Group of five</dd></div><div><dt>Context</dt><dd>Digital Electronics, APU.</dd></div></dl></section>
-    <section class="pj-body" data-shape="circuit" data-x="0.6" data-y="0" data-o="0.25" data-s="0.8">
+    <section class="pj-meta-wrap"><dl class="pj-meta glass frame"><div><dt>Role</dt><dd>Group leader. Built my own ALU and compiled the group design</dd></div><div><dt>Year</dt><dd>2024</dd></div><div><dt>Team</dt><dd>Group of five</dd></div><div><dt>Context</dt><dd>Digital Electronics, APU.</dd></div></dl></section>
+    <section class="pj-body" data-shape="circuit" data-x="0.6" data-y="0" data-o="0.2" data-s="0.8">
       <div class="pj-main">
         <h2>Overview</h2>
         <p>I turned the equation into a 16-row truth table, minimised each output bit with Karnaugh maps, and implemented the result with logic gates driving three 7-segment displays.</p><p>The group designed a decoder-based control unit so only one member&#x27;s ALU is active at a time. I assembled the final combined circuit and ran its simulation.</p>
@@ -58,19 +73,19 @@
         
       </div>
       <aside class="pj-side">
-        <div class="panel"><p class="panel-h">Results</p><div class="res"><p class="res-v">16/16</p><p class="res-l">correct in simulation</p></div><div class="res"><p class="res-v">8/16</p><p class="res-l">correct on the breadboard, with the cause documented</p></div></div>
-        <div class="panel"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>NI Multisim</span><span>Logic design</span><span>K-maps</span></p></div>
+        <div class="panel glass frame"><p class="panel-h">Results</p><div class="res"><p class="res-v">16/16</p><p class="res-l">correct in simulation</p></div><div class="res"><p class="res-v">8/16</p><p class="res-l">correct on the breadboard, with the cause documented</p></div></div>
+        <div class="panel glass frame"><p class="panel-h">Tools &amp; stack</p><p class="chips"><span>NI Multisim</span><span>Logic design</span><span>K-maps</span></p></div>
         
       </aside>
     </section>
-    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="circuit" data-x="-0.6" data-y="0" data-o="0.3" data-s="0.8">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Gallery · 5 images</p>
+    <section class="pj-gallery" aria-labelledby="gal-title" data-shape="circuit" data-x="-0.6" data-y="0" data-o="0.25" data-s="0.8">
+      <p class="ch-kicker"><span class="kd" aria-hidden="true"></span>Gallery · 5 images</p>
       <h2 id="gal-title">A closer look</h2>
-      <div class="gal"><figure class="g-item reveal zoomable"><img src="../assets/img/alu/sim-435.webp" alt="Simulation output 43.5." width="1365" height="649" loading="lazy"><figcaption>Simulation output 43.5.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/alu/sim-075.webp" alt="Simulation output 07.5." width="1342" height="646" loading="lazy"><figcaption>Simulation output 07.5.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/alu/breadboard.webp" alt="The breadboard build." width="529" height="706" loading="lazy"><figcaption>The breadboard build.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/alu/truth-table.webp" alt="Hand-worked truth table." width="1085" height="630" loading="lazy"><figcaption>Hand-worked truth table.</figcaption></figure><figure class="g-item reveal zoomable"><img src="../assets/img/alu/control-unit.webp" alt="Group control unit." width="1644" height="532" loading="lazy"><figcaption>Group control unit.</figcaption></figure></div>
+      <div class="gal"><figure class="g-item frame reveal zoomable"><img src="../assets/img/alu/sim-435.webp" alt="Simulation output 43.5." width="1365" height="649" loading="lazy"><figcaption>Simulation output 43.5.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/alu/sim-075.webp" alt="Simulation output 07.5." width="1342" height="646" loading="lazy"><figcaption>Simulation output 07.5.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/alu/breadboard.webp" alt="The breadboard build." width="529" height="706" loading="lazy"><figcaption>The breadboard build.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/alu/truth-table.webp" alt="Hand-worked truth table." width="1085" height="630" loading="lazy"><figcaption>Hand-worked truth table.</figcaption></figure><figure class="g-item frame reveal zoomable"><img src="../assets/img/alu/control-unit.webp" alt="Group control unit." width="1644" height="532" loading="lazy"><figcaption>Group control unit.</figcaption></figure></div>
     </section>
     <nav class="pj-nav" aria-label="More projects">
-      <a href="driptech.html" class="tilt"><span>← Previous</span><strong>DripTech</strong></a>
-      <a href="amplifier.html" class="tilt pj-nav-next"><span>Next →</span><strong>Two-Stage BJT Amplifier</strong></a>
+      <a href="driptech.html" class="glass frame tilt"><span>← Previous</span><strong>DripTech</strong></a>
+      <a href="amplifier.html" class="glass frame tilt pj-nav-next"><span>Next →</span><strong>Two-Stage BJT Amplifier</strong></a>
     </nav>
   </main>
   <footer class="footer">

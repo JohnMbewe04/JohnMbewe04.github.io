@@ -5,88 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Chisomo Mbewe · Electrical &amp; Electronic Engineer</title>
   <meta name="description" content="Portfolio of Chisomo Mbewe, Electrical &amp; Electronic Engineering student at APU, Kuala Lumpur: embedded systems, IoT, edge AI and power systems. Grand Champion, AgriXcelerate 2026.">
-  <meta name="theme-color" content="#04050a">
+  <meta name="theme-color" content="#eaf6fd">
   <meta property="og:title" content="Chisomo Mbewe · Electrical &amp; Electronic Engineer">
   <meta property="og:description" content="Portfolio of Chisomo Mbewe, Electrical &amp; Electronic Engineering student at APU, Kuala Lumpur: embedded systems, IoT, edge AI and power systems. Grand Champion, AgriXcelerate 2026.">
-  <meta property="og:image" content="assets/img/profile/portrait.webp">
+  <meta property="og:image" content="assets/img/profile/hero.webp">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304050a'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%238ab4ff' stroke-width='2.5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff6ec7'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23eaf6fd'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%231c4e75' stroke-width='2.5'/%3E%3Cpath d='M32 14 42 32 32 50 22 32Z' fill='%232fa0c6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6ae9ba5e">
   <script>
     document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('veil')) document.documentElement.classList.add('no-veil'); sessionStorage.setItem('veil', '1'); } catch (e) {}
     if (!(window.CSS && CSS.supports('(animation-timeline: view()) and (animation-range: entry)'))) document.documentElement.classList.add('no-sda');
   </script>
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
-  <script src="main.js" defer></script>
-  <script type="module" src="bg.js"></script>
+  <script src="main.js?v=6ae9ba5e" defer></script>
+  <script type="module" src="bg.js?v=6ae9ba5e"></script>
 </head>
-<body>
+<body class="home">
   <canvas class="bg-canvas" aria-hidden="true"></canvas>
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+    <radialGradient id="gm-orb" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#bde5ff"/><stop offset=".55" stop-color="#58c9f3"/><stop offset=".85" stop-color="#2fa0c6"/><stop offset="1" stop-color="#1c4e75"/></radialGradient>
+    <linearGradient id="gm-metal" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#dcecf6"/><stop offset=".6" stop-color="#93b8cf"/><stop offset=".8" stop-color="#e9f5fc"/><stop offset="1" stop-color="#7fa6c0"/></linearGradient>
+    <radialGradient id="gm-glow"><stop offset="0" stop-color="#58c9f3" stop-opacity=".55"/><stop offset=".6" stop-color="#58c9f3" stop-opacity=".12"/><stop offset="1" stop-color="#58c9f3" stop-opacity="0"/></radialGradient>
+    <linearGradient id="am-sheen" gradientUnits="userSpaceOnUse" x1="-110" y1="-125" x2="110" y2="115"><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset=".65" stop-color="#fff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-220 -240;220 240;220 240" keyTimes="0;.45;1" dur="6s" repeatCount="indefinite"/></linearGradient>
+    <g id="am-sil"><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/><path d="M0,-60L9,-80L0,-118L-9,-80Z"/><path d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/><path d="M0,60L9,77L0,102L-9,77Z"/><circle r="64.5"/><circle cy="-124" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/></g>
+    <pattern id="rope-twist" patternUnits="userSpaceOnUse" width="3.4" height="3.2" patternTransform="skewY(-40)"><rect width="3.4" height="3.2" fill="#2a6a93"/><rect width="3.4" height="1.5" fill="#6fb6dc"/><rect y="1.5" width="3.4" height=".35" fill="#123a58"/></pattern>
+    <linearGradient id="rope-round" gradientUnits="userSpaceOnUse" x1="-1.7" y1="0" x2="1.7" y2="0"><stop offset="0" stop-color="#061826" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity=".28"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#061826" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="ec-wave" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fa0c6" stop-opacity=".15"/><stop offset=".5" stop-color="#58c9f3" stop-opacity=".55"/><stop offset="1" stop-color="#2fa0c6" stop-opacity=".15"/></linearGradient>
+    <linearGradient id="ec-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fa0c6" stop-opacity="0"/><stop offset=".5" stop-color="#2fa0c6"/><stop offset="1" stop-color="#2fa0c6" stop-opacity="0"/></linearGradient>
+  </defs></svg>
   <a class="skip" href="#main">Skip to content</a>
   <div class="progress" aria-hidden="true"></div>
   <header class="nav">
-    <a class="brand" href="index.html" aria-label="Chisomo Mbewe, home"><span class="brand-orb" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
-    <nav class="nav-links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#archive">Archive</a><a href="index.html#contact">Contact</a></nav>
-    <a class="btn btn-sm btn-grad" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <a class="brand" href="index.html" aria-label="Chisomo Mbewe, home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Chisomo Mbewe</span></a>
+    <p class="nav-chapter" aria-hidden="true"><span class="nc-num">✦</span><span class="nc-title">Prologue</span></p>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#origin">About</a><a href="index.html#seals">Certificates</a><a href="index.html#echoes">Beyond work</a><a href="index.html#contact">Contact</a></nav>
+    <button class="sfx-btn" type="button" aria-pressed="true" aria-label="Interface sounds" title="Interface sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="sfx-on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="sfx-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+    <a class="btn btn-sm btn-fill"href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
   </header>
-  <div class="mobile-menu" id="mobile-menu" hidden><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#archive">Archive</a><a href="index.html#contact">Contact</a><a href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <div class="mobile-menu" id="mobile-menu" hidden><a href="index.html#work">Work</a><a href="index.html#origin">About</a><a href="index.html#seals">Certificates</a><a href="index.html#echoes">Beyond work</a><a href="index.html#contact">Contact</a><a href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
+  <nav class="rail" aria-label="Chapters"><span class="rail-line" aria-hidden="true"><i></i></span><ol><li><a href="#prologue" data-ch="prologue"><span class="r-num">✦</span><span class="r-label">Prologue</span></a></li><li><a href="#origin" data-ch="origin"><span class="r-num">I</span><span class="r-label">Origin</span></a></li><li><a href="#now" data-ch="now"><span class="r-num">II</span><span class="r-label">Now</span></a></li><li><a href="#work" data-ch="work"><span class="r-num">III</span><span class="r-label">Works</span></a></li><li><a href="#skills" data-ch="skills"><span class="r-num">IV</span><span class="r-label">Skills</span></a></li><li><a href="#archive" data-ch="archive"><span class="r-num">V</span><span class="r-label">Archive</span></a></li><li><a href="#journey" data-ch="journey"><span class="r-num">VI</span><span class="r-label">Journey</span></a></li><li><a href="#seals" data-ch="seals"><span class="r-num">VII</span><span class="r-label">Certificates</span></a></li><li><a href="#echoes" data-ch="echoes"><span class="r-num">VIII</span><span class="r-label">Beyond work</span></a></li><li><a href="#contact" data-ch="contact"><span class="r-num">✦</span><span class="r-label">Contact</span></a></li></ol></nav>
+  <div class="veil" aria-hidden="true"><div class="veil-seal"><svg class="gem gem-veil" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><g class="gm-glyph"><path d="M0,-30L22,0L0,30L-22,0Z"/><path d="M-38,0C-30,-16 -20,-16 -12,0S6,16 12,0 30,-16 38,0"/><circle r="4"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg></div><p class="veil-name">Chisomo Mbewe</p></div>
   <main id="main">
-    <section class="hero split" aria-labelledby="hero-title" data-shape="sphere" data-x="0.5" data-y="0" data-o="1" data-s="1">
+    <section class="hero split chapter" id="prologue" data-ch="prologue" aria-labelledby="hero-title" data-shape="gem" data-x="0.5" data-y="0" data-o="0.9" data-s="1">
       <div class="split-text">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Electrical &amp; Electronic Engineer · Kuala Lumpur</p>
+        <p class="ch-kicker hero-kicker"><span class="kd" aria-hidden="true"></span>Prologue · Electrical &amp; Electronic Engineer · Kuala Lumpur</p>
         <h1 id="hero-title">Chisomo Mbewe</h1>
-        <p class="hero-sub">I build machines that <span class="grad">sense, think and report&nbsp;back.</span></p>
-        <p class="lede">Final-year engineering student at Asia Pacific University. I design the hardware, write the firmware, train the models and build the dashboards, then prove it all in the field.</p>
+        <p class="hero-sub">I build machines that <span class="ink">sense, think and report&nbsp;back.</span></p>
+        <p class="lede">Final-year engineering student at Asia Pacific University. I design the hardware, write the firmware, train the models and build the apps, then test it all in the field.</p>
         <div class="cta">
-          <a class="btn btn-grad magnetic" href="#work">See my work</a>
+          <a class="btn btn-fill magnetic" href="#origin">Begin the story</a>
           <a class="btn magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Download resume</a>
         </div>
         <dl class="hero-stats">
           <div><dt>Grand Champion</dt><dd>AgriXcelerate 2026</dd></div>
-          <div><dt>0.944 F1</dt><dd>AI running on a microcontroller</dd></div>
+          <div><dt>3 certifications</dt><dd>RCAI, Azure AI-900 and more</dd></div>
           <div><dt>20 projects</dt><dd>hardware, AI, power, CAD</dd></div>
         </dl>
       </div>
       <div class="split-visual">
-        <div class="orb-slot orb-hero" data-anchor data-k="1.02">
-          <img class="hero-portrait" src="assets/img/profile/portrait-circle.webp" alt="Chisomo Mbewe" width="595" height="597" fetchpriority="high">
+        <div class="seal-portrait" data-anchor data-k="1.22">
+          <div class="amulet">
+          <div class="am-glow"></div><div class="am-shadow"></div>
+          <div class="am-sway"><div class="am-body">
+            <svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-1px;--l:1"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-2px;--l:2"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-3px;--l:3"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-4px;--l:4"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-5px;--l:5"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-6px;--l:6"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-7px;--l:7"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-8px;--l:8"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-9px;--l:9"><use href="#am-sil"/></svg><svg class="am-edge" viewBox="-110 -125 220 240" style="--z:-10px;--l:10"><use href="#am-sil"/></svg>
+            <img class="sp-photo" src="assets/img/profile/seal.webp" alt="Chisomo Mbewe" width="720" height="722" fetchpriority="high">
+            <svg class="am-face" viewBox="-110 -125 220 240" aria-hidden="true">
+              <g class="am-string">
+                <rect x="-1.7" y="-700" width="3.4" height="555" fill="url(#rope-twist)"/><rect x="-1.7" y="-700" width="3.4" height="555" fill="url(#rope-round)"/>
+                <path class="am-loop" d="M-1.2,-141C-5,-136 -5.5,-128 -3.2,-120C-1.5,-115 1.5,-115 3.2,-120C5.5,-128 5,-136 1.2,-141"/>
+              </g>
+              <circle class="am-bail" cy="-124" r="6.5"/>
+              <path class="am-loop am-loop-front" d="M-3.6,-122C-2,-116.5 2,-116.5 3.6,-122"/>
+              <rect class="am-whip" x="-2.6" y="-151" width="5.2" height="9" rx="1.6"/>
+              <path class="am-whip-lines" d="M-2.6,-149L2.6,-147.6M-2.6,-146.6L2.6,-145.2M-2.6,-144.2L2.6,-142.8"/>
+              <g class="gm-frame-solid"><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/><path d="M0,-60L9,-80L0,-118L-9,-80Z"/><path d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/><path d="M0,60L9,77L0,102L-9,77Z"/></g>
+              <circle class="am-ring" r="61"/><g class="am-sheen"><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/><path d="M0,-60L9,-80L0,-118L-9,-80Z"/><path d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/><path d="M0,60L9,77L0,102L-9,77Z"/><circle r="61" fill="none" stroke-width="7"/></g>
+              <circle class="gm-inner" r="55"/>
+              <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+            </svg>
+            <div class="am-dome"></div>
+          </div></div>
         </div>
-        <p class="hint">Drag to spin the sphere · move through the particles</p>
+        </div>
+        <p class="hint">Move to tilt the amulet · drag to turn the particles</p>
       </div>
+      <a class="scroll-cue" href="#origin" aria-label="Scroll to chapter one"><span></span></a>
     </section>
 
-    <section class="about split" id="about" aria-labelledby="about-title" data-shape="helix" data-x="-0.5" data-y="0" data-o="0.85" data-s="1">
-      <div class="split-visual"><div class="orb-slot" data-anchor data-k="0.95"></div></div>
-      <div class="split-text reveal">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>About</p>
-        <h2 id="about-title">Where hardware meets intelligence</h2>
-        <p class="lede">I like owning the whole system: the electronics, the firmware, the models and the dashboards people read. I've led a group project every year of my degree, and I enjoy pitching what we build.</p>
-        <dl class="facts">
+    <section class="origin split chapter" id="origin" data-ch="origin" aria-labelledby="origin-title" data-shape="helix" data-x="-0.55" data-y="0" data-o="0.35" data-s="1"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <figure class="origin-photo frame reveal zoomable"><img src="assets/img/profile/hero.webp" alt="Chisomo Mbewe" width="1100" height="1397" loading="lazy"><figcaption>Chisomo Mbewe</figcaption></figure>
+      <div class="split-text">
+        <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">I</span></div>
+        <p class="ch-kicker">Chapter I · Origin</p>
+        <h2 id="origin-title">Where hardware meets intelligence</h2>
+        <p class="lede">I like owning the whole system: the electronics, the firmware, the models and the apps people actually use. I've led a group project every year of my degree, and I enjoy pitching what we build.</p>
+      </header>
+        <dl class="facts reveal">
           <div><dt>Studying</dt><dd>BEng (Hons) Electrical &amp; Electronic Engineering, APU</dd></div>
-          <div><dt>Currently</dt><dd>Part-time intern at AGRHI HUB · EPSSCOM 2026 · BringUp</dd></div>
+          <div><dt>Currently</dt><dd>Final year project NeuroClear · part-time intern at AGRHI HUB</dd></div>
           <div><dt>Recognition</dt><dd>Grand Champion, AgriXcelerate 2026</dd></div>
-          <div><dt>Research</dt><dd>Lead author, IoT fertigation paper &amp; book chapter</dd></div>
+          <div><dt>Research</dt><dd>Lead author, IoT fertigation paper</dd></div>
         </dl>
-        <ul class="bars" aria-label="Projects by area"><li><span>Hardware &amp; Embedded</span><span class="bar"><i style="--v:0.70"></i></span><b>7</b></li><li><span>AI &amp; Data</span><span class="bar"><i style="--v:0.80"></i></span><b>8</b></li><li><span>Software</span><span class="bar"><i style="--v:1.00"></i></span><b>10</b></li><li><span>Power &amp; Simulation</span><span class="bar"><i style="--v:0.60"></i></span><b>6</b></li><li><span>Design &amp; CAD</span><span class="bar"><i style="--v:0.20"></i></span><b>2</b></li></ul>
-        <div class="cta"><a class="btn btn-grad magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a><a class="btn magnetic" href="mailto:chisomo.mbewe04@gmail.com">Email me</a></div>
       </div>
     </section>
 
-    <section class="work-intro" id="work" aria-labelledby="work-title" data-shape="wave" data-x="0" data-y="-0.3" data-o="0.7" data-s="1.1">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Selected work</p>
-      <h2 id="work-title">Six projects, end to end</h2>
-      <p class="lede">Competition wins, research and hackathon builds. Each one opens into a full case study with more graphics.</p>
+    <section class="now chapter" id="now" data-ch="now" aria-labelledby="now-title" data-shape="gem" data-x="0.6" data-y="-0.1" data-o="0.16" data-s="0.8"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">II</span></div>
+        <p class="ch-kicker">Chapter II · The current chapter</p>
+        <h2 id="now-title">NeuroClear</h2>
+        <p class="lede">My final year project, and the one I am building right now.</p>
+      </header>
+      <div class="now-grid">
+        <a class="now-hero frame tilt reveal" href="projects/neuroclear.html" aria-label="Open the NeuroClear case study"><img src="assets/img/neuroclear/concept.webp" alt="NeuroClear concept render: smart glasses with sensors" width="1344" height="768" loading="lazy"><span class="glare" aria-hidden="true"></span><span class="now-badge"><span class="state state-live"><i></i>In progress</span></span></a>
+        <div class="now-text glass frame reveal">
+          <div class="now-about">
+            <p class="slide-kicker">Multi-sensor wellness glasses with edge AI</p>
+            <p>Smart glasses that watch for mental fatigue, poor neck posture, digital eye strain and nearby obstacles. All processing happens on the glasses, and alerts arrive through bone conduction or a companion app.</p>
+            <dl class="now-stats"><div><dt>0.14 µVrms</dt><dd>EEG noise floor</dd></div><div><dt>3 PCBs</dt><dd>designed in KiCad</dd></div><div><dt>5 senses</dt><dd>in one frame</dd></div></dl>
+            <a class="btn btn-fill magnetic" href="projects/neuroclear.html">Follow the build</a>
+          </div>
+          <div class="now-log">
+            <p class="q-h">Quest log</p>
+            <ol class="quest"><li class="q-done"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Done</span>Three custom PCBs designed in KiCad</li><li class="q-done"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Done</span>Boards brought up: 0.14 µVrms noise floor</li><li class="q-done"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Done</span>EEG pipeline built in Python and ported to C</li><li class="q-done"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Done</span>Flutter companion app and clip-on Rev C</li><li class="q-now"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Now</span>Evaluation: accuracy, alert reliability, latency and battery life</li><li class="q-next"><span class="q-dot" aria-hidden="true"></span><span class="q-state">Next</span>Final report</li></ol>
+          </div>
+        </div>
+      </div>
+      <div class="now-strip"><figure class="nc-shot zoomable frame"><img src="assets/img/neuroclear/mcu-iso.webp" alt="MCU temple board (PCB1): ESP32-S3 module, USB-C, IMU, fuel gauge and audio amplifier." width="1600" height="756" loading="lazy"><figcaption>MCU temple board</figcaption></figure><figure class="nc-shot zoomable frame"><img src="assets/img/neuroclear/afe-iso.webp" alt="Analogue front-end (PCB2): ADS1299-4 for the four EEG channels." width="1600" height="759" loading="lazy"><figcaption>EEG front-end</figcaption></figure><figure class="nc-shot zoomable frame"><img src="assets/img/neuroclear/clipon-exploded.webp" alt="One side of the clip-on, exploded." width="1390" height="1005" loading="lazy"><figcaption>Clip-on, Rev C</figcaption></figure><figure class="nc-shot zoomable frame"><img src="assets/img/neuroclear/app-dashboard.webp" alt="Companion app: live neural-state view with the electrodes on the glasses." width="1600" height="1000" loading="lazy"><figcaption>Companion app</figcaption></figure><figure class="nc-shot zoomable frame"><img src="assets/img/neuroclear/eeg-alpha.webp" alt="Bring-up: eyes-open versus eyes-closed alpha test." width="1300" height="450" loading="lazy"><figcaption>First EEG at bring-up</figcaption></figure></div>
+    </section>
+
+    <section class="work-intro chapter" id="work" data-ch="work" aria-labelledby="work-title" data-shape="wave" data-x="0" data-y="-0.55" data-o="0.3" data-s="1.1"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">III</span></div>
+        <p class="ch-kicker">Chapter III · Works</p>
+        <h2 id="work-title">Five builds, end to end</h2>
+        <p class="lede">Competition wins, research and hackathon builds. Each one opens into a full case study.</p>
+      </header>
     </section>
     <div class="slides">
-      <article class="slide split" data-shape="wave" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/wave.html" aria-label="Open the W.A.V.E case study"><img src="assets/img/wave/boat.webp" alt="W.A.V.E: A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean." width="1100" height="874" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+      <article class="slide split" data-shape="wave" data-x="-0.55" data-y="0" data-o="0.32" data-s="0.9">
+        <a class="slide-media tilt frame reveal" href="projects/wave.html" aria-label="Open the W.A.V.E case study"><img src="assets/img/wave/boat.webp" alt="W.A.V.E: A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean." width="1100" height="874" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
         <div class="slide-text reveal">
-          <p class="slide-count">01 <span>/ 06</span></p>
+          <p class="slide-count"><span>01</span> / 05</p>
           <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2026</span></div>
           <h3>W.A.V.E</h3>
           <p class="slide-kicker">Water Assessment Vessel for Ecosystems</p>
@@ -96,10 +217,10 @@
           <a class="text-link" href="projects/wave.html">Read the case study <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="slide split rev" data-shape="helix" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/agrhi-iot.html" aria-label="Open the Autopot &amp; Fertigation IoT case study"><img src="assets/img/agrhi/app-autopot.webp" alt="Autopot &amp; Fertigation IoT: A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control." width="1248" height="977" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+      <article class="slide split rev" data-shape="helix" data-x="0.55" data-y="0" data-o="0.32" data-s="0.9">
+        <a class="slide-media tilt frame reveal" href="projects/agrhi-iot.html" aria-label="Open the Autopot &amp; Fertigation IoT case study"><img src="assets/img/agrhi/app-autopot.webp" alt="Autopot &amp; Fertigation IoT: A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control." width="1248" height="977" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
         <div class="slide-text reveal">
-          <p class="slide-count">02 <span>/ 06</span></p>
+          <p class="slide-count"><span>02</span> / 05</p>
           <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2025–27</span></div>
           <h3>Autopot &amp; Fertigation IoT</h3>
           <p class="slide-kicker">Automated plant monitoring and nutrient delivery</p>
@@ -109,10 +230,10 @@
           <a class="text-link" href="projects/agrhi-iot.html">Read the case study <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="slide split" data-shape="sphere" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/trustport.html" aria-label="Open the TrustPort case study"><img src="assets/img/trustport/dashboard.webp" alt="TrustPort: Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check." width="1600" height="772" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+      <article class="slide split" data-shape="sphere" data-x="-0.55" data-y="0" data-o="0.32" data-s="0.9">
+        <a class="slide-media tilt frame reveal" href="projects/trustport.html" aria-label="Open the TrustPort case study"><img src="assets/img/trustport/dashboard.webp" alt="TrustPort: Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check." width="1600" height="772" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
         <div class="slide-text reveal">
-          <p class="slide-count">03 <span>/ 06</span></p>
+          <p class="slide-count"><span>03</span> / 05</p>
           <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2025</span></div>
           <h3>TrustPort</h3>
           <p class="slide-kicker">An AI credit passport for newcomers</p>
@@ -122,10 +243,10 @@
           <a class="text-link" href="projects/trustport.html">Read the case study <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="slide split rev" data-shape="torus" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/reciperun.html" aria-label="Open the RecipeRun case study"><div class="phone-row"><img src="assets/img/reciperun/home.webp" alt="" width="482" height="1075" loading="lazy"><img src="assets/img/reciperun/meal.webp" alt="" width="491" height="1078" loading="lazy"><img src="assets/img/reciperun/cooking.webp" alt="" width="476" height="1078" loading="lazy"></div><span class="glare" aria-hidden="true"></span></a>
+      <article class="slide split rev" data-shape="torus" data-x="0.55" data-y="0" data-o="0.32" data-s="0.9">
+        <a class="slide-media tilt frame reveal" href="projects/reciperun.html" aria-label="Open the RecipeRun case study"><div class="phone-row"><img src="assets/img/reciperun/home.webp" alt="" width="482" height="1075" loading="lazy"><img src="assets/img/reciperun/meal.webp" alt="" width="491" height="1078" loading="lazy"><img src="assets/img/reciperun/cooking.webp" alt="" width="476" height="1078" loading="lazy"></div><span class="glare" aria-hidden="true"></span></a>
         <div class="slide-text reveal">
-          <p class="slide-count">04 <span>/ 06</span></p>
+          <p class="slide-count"><span>04</span> / 05</p>
           <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2026</span></div>
           <h3>RecipeRun</h3>
           <p class="slide-kicker">AI cooking assistant</p>
@@ -135,64 +256,77 @@
           <a class="text-link" href="projects/reciperun.html">Read the case study <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="slide split" data-shape="circuit" data-x="-0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/epsscom.html" aria-label="Open the EPSSCOM 2026 case study"><img src="assets/img/epsscom/sld-protection.webp" alt="EPSSCOM 2026: A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP." width="1300" height="1814" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
+      <article class="slide split" data-shape="circuit" data-x="-0.55" data-y="0" data-o="0.32" data-s="0.9">
+        <a class="slide-media tilt frame reveal" href="projects/epsscom.html" aria-label="Open the EPSSCOM 2026 case study"><img src="assets/img/epsscom/sld-protection.webp" alt="EPSSCOM 2026: A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP." width="1300" height="1814" loading="lazy"><span class="glare" aria-hidden="true"></span></a>
         <div class="slide-text reveal">
-          <p class="slide-count">05 <span>/ 06</span></p>
-          <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span>2026</span></div>
+          <p class="slide-count"><span>05</span> / 05</p>
+          <div class="slide-meta"><span class="state"><i></i>Completed</span><span>2026</span></div>
           <h3>EPSSCOM 2026</h3>
           <p class="slide-kicker">Protection coordination for a 132/11 kV substation</p>
           <p class="slide-sum">A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP.</p>
-          <p class="outcome">Representing APU · finals 24 Oct 2026, UNITEN Putrajaya</p>
+          <p class="outcome">Represented APU at the national finals · October 2026</p>
           <p class="chips"><span>Power &amp; Simulation</span></p>
           <a class="text-link" href="projects/epsscom.html">Read the case study <span aria-hidden="true">→</span></a>
         </div>
       </article>
-      <article class="slide split rev" data-shape="galaxy" data-x="0.52" data-y="0" data-o="0.55" data-s="0.9">
-        <a class="slide-media tilt reveal" href="projects/bringup.html" aria-label="Open the BringUp case study"><div class="loop-viz" role="img" aria-label="BringUp agent loop: ingest, plan, preflight, build, flash, observe, verify, diagnose">
-      <svg viewBox="0 0 600 420">
-        <defs><linearGradient id="lvg" x1="0" x2="1"><stop offset="0" stop-color="#6f8dff"/><stop offset=".5" stop-color="#b07bff"/><stop offset="1" stop-color="#ff6ec7"/></linearGradient></defs>
-        <ellipse class="lv-ring" cx="300" cy="210" rx="205" ry="150"/>
-        <ellipse class="lv-ring lv-ring-2" cx="300" cy="210" rx="120" ry="86"/>
-        <g class="lv-node" style="--i:0"><circle cx="300" cy="60" r="7"/><text x="300" y="44" text-anchor="middle">Ingest</text></g><g class="lv-node" style="--i:1"><circle cx="445" cy="104" r="7"/><text x="445" y="88" text-anchor="middle">Plan</text></g><g class="lv-node" style="--i:2"><circle cx="505" cy="210" r="7"/><text x="505" y="194" text-anchor="middle">Preflight</text></g><g class="lv-node" style="--i:3"><circle cx="445" cy="316" r="7"/><text x="445" y="344" text-anchor="middle">Build</text></g><g class="lv-node" style="--i:4"><circle cx="300" cy="360" r="7"/><text x="300" y="388" text-anchor="middle">Flash</text></g><g class="lv-node" style="--i:5"><circle cx="155" cy="316" r="7"/><text x="155" y="344" text-anchor="middle">Observe</text></g><g class="lv-node" style="--i:6"><circle cx="95" cy="210" r="7"/><text x="95" y="238" text-anchor="middle">Verify</text></g><g class="lv-node" style="--i:7"><circle cx="155" cy="104" r="7"/><text x="155" y="88" text-anchor="middle">Diagnose</text></g>
-        <circle class="lv-runner" r="5"><animateMotion dur="9s" repeatCount="indefinite" path="M300,60 a205,150 0 1,1 -0.1,0"/></circle>
-        <text class="lv-core" x="300" y="204" text-anchor="middle">LLM proposes</text>
-        <text class="lv-core lv-core-2" x="300" y="230" text-anchor="middle">verifier judges</text>
-      </svg>
-    </div><span class="glare" aria-hidden="true"></span></a>
-        <div class="slide-text reveal">
-          <p class="slide-count">06 <span>/ 06</span></p>
-          <div class="slide-meta"><span class="state state-live"><i></i>In progress</span><span>2026</span></div>
-          <h3>BringUp</h3>
-          <p class="slide-kicker">An agent that proves firmware works on the wire</p>
-          <p class="slide-sum">Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.</p>
-          <p class="outcome">Nebius × NVIDIA Global AI Hackathon · building now</p>
-          <p class="chips"><span>AI &amp; Data</span><span>Hardware &amp; Embedded</span></p>
-          <a class="text-link" href="projects/bringup.html">Read the case study <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
     </div>
 
-    <section class="skills split" id="skills" aria-labelledby="skills-title" data-shape="circuit" data-x="0" data-y="0" data-o="0.25" data-s="1.1">
-      <div class="split-text reveal">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Skills map</p>
+    <section class="skills split chapter" id="skills" data-ch="skills" aria-labelledby="skills-title" data-shape="circuit" data-x="0" data-y="0" data-o="0.1" data-s="1.1"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <div class="split-text">
+        <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">IV</span></div>
+        <p class="ch-kicker">Chapter IV · Resonance</p>
         <h2 id="skills-title">Skills, connected to the work</h2>
-        <p class="lede">24 skills linked to the 20 projects where I used them. Hover or tap a node to trace its connections, drag nodes around, and open any project.</p>
-        <div class="map-legend"><span class="lg lg-hw">Hardware &amp; Embedded</span><span class="lg lg-ai">AI &amp; Data</span><span class="lg lg-sw">Software</span><span class="lg lg-power">Power &amp; Simulation</span><span class="lg lg-cad">Design &amp; CAD</span><span class="lg lg-skill">Skill</span></div>
-        <div class="toolkit"><div class="tk"><h3>Embedded &amp; IoT</h3><p>ESP32 / ESP32-S3, FreeRTOS, Arduino, ADS1115, RS-485 Modbus, I²C · SPI · 1-Wire, 4G / GPS modems, Sensor calibration, Logic analysers</p></div><div class="tk"><h3>AI &amp; Data</h3><p>Edge ML on MCUs, scikit-learn, PyTorch · ResNet, Machine vision, Gemini, GPT-4o, Multi-model routing, Agentic workflows</p></div><div class="tk"><h3>Software</h3><p>Python, C / C++, Dart · Flutter, TypeScript, Next.js, FastAPI, Firebase, Streamlit</p></div><div class="tk"><h3>Power &amp; Simulation</h3><p>ETAP, MATLAB, Simulink, Fuzzy Logic Designer, LabVIEW, NI Multisim, LTspice, Relux</p></div><div class="tk"><h3>Design &amp; CAD</h3><p>SOLIDWORKS, AutoCAD, 3D printing</p></div><div class="tk"><h3>How I work</h3><p>Team leadership, Technical writing, Research &amp; validation, Pitching, Proofreading</p></div></div>
+        <p class="lede">Hover or tap a skill to see the projects where I used it, or a project to see the skills behind it.</p>
+      </header>
+        <div class="map-legend reveal"><span class="lg lg-hw">Hardware &amp; Embedded</span><span class="lg lg-ai">AI &amp; Data</span><span class="lg lg-sw">Software</span><span class="lg lg-power">Power &amp; Simulation</span><span class="lg lg-cad">Design &amp; CAD</span></div>
+        <div class="toolkit reveal"><div class="tk"><h3>Embedded &amp; IoT</h3><p>ESP32 / ESP32-S3, FreeRTOS, Arduino, ADS1115 · ADS1299, RS-485 Modbus, I²C · SPI · BLE, 4G / GPS modems, Sensor calibration, Logic analysers</p></div><div class="tk"><h3>Hardware design</h3><p>KiCad PCB design, Analogue front-ends, Power paths, Board bring-up, LTspice, NI Multisim</p></div><div class="tk"><h3>AI &amp; Data</h3><p>Edge ML on MCUs, scikit-learn, EEG signal processing, PyTorch · ResNet, Machine vision, Gemini · OpenAI, Multi-model routing, Agentic workflows</p></div><div class="tk"><h3>Software</h3><p>Python, C / C++, Dart · Flutter, TypeScript · React, Next.js, FastAPI, Firebase, Claude Code · Codex</p></div><div class="tk"><h3>Power &amp; Simulation</h3><p>ETAP, MATLAB, Simulink, Fuzzy Logic Designer, LabVIEW, Relux</p></div><div class="tk"><h3>Design &amp; CAD</h3><p>SOLIDWORKS, AutoCAD, 3D printing</p></div><div class="tk"><h3>How I work</h3><p>Team leadership, Technical writing, Research &amp; validation, Pitching, Proofreading, Time management</p></div></div>
       </div>
-      <div class="map-frame reveal">
-        <canvas class="map-canvas" aria-label="Interactive graph linking skills to projects"></canvas>
-        <div class="map-tip" hidden></div>
+      <div class="map-frame glass frame reveal">
+        <div class="lmap" data-lmap>
+          <ul class="lm-skills" aria-label="Skills"><li><button type="button" data-to="neuroclear wave agrhi-iot smart-hospital">ESP32 firmware</button></li><li><button type="button" data-to="neuroclear">PCB design (KiCad)</button></li><li><button type="button" data-to="neuroclear wave agrhi-iot smart-hospital">Sensors &amp; calibration</button></li><li><button type="button" data-to="wave agrhi-iot reciperun smart-hospital">IoT &amp; Firebase</button></li><li><button type="button" data-to="neuroclear agrhi-iot reciperun trustport">Flutter / Dart</button></li><li><button type="button" data-to="wave">Next.js</button></li><li><button type="button" data-to="neuroclear trustport medical-imaging diabetes-predictor smart-hospital">Python</button></li><li><button type="button" data-to="wave trustport">FastAPI</button></li><li><button type="button" data-to="neuroclear wave medical-imaging diabetes-predictor dsm-fuzzy">Machine learning</button></li><li><button type="button" data-to="medical-imaging trustport">Computer vision</button></li><li><button type="button" data-to="trustport reciperun">LLMs &amp; agents</button></li><li><button type="button" data-to="speech-enhancement piezo-harvester dsm-fuzzy smart-energy-meter driptech epsscom">MATLAB</button></li><li><button type="button" data-to="piezo-harvester dsm-fuzzy">Simulink</button></li><li><button type="button" data-to="neuroclear speech-enhancement smart-hospital wave">Signal processing</button></li><li><button type="button" data-to="hydro-labview">LabVIEW</button></li><li><button type="button" data-to="epsscom dsm-fuzzy hydro-labview lighting-design">Power systems</button></li><li><button type="button" data-to="piezo-harvester wave">Power electronics</button></li><li><button type="button" data-to="epsscom">ETAP</button></li><li><button type="button" data-to="neuroclear alu amplifier smart-hospital">Circuit design</button></li><li><button type="button" data-to="alu amplifier">Multisim / LTspice</button></li><li><button type="button" data-to="neuroclear humanoid-robot wave">SOLIDWORKS &amp; 3D print</button></li><li><button type="button" data-to="lighting-design">AutoCAD &amp; Relux</button></li><li><button type="button" data-to="neuroclear semester-planner smart-hospital wave agrhi-iot">C / C++</button></li><li><button type="button" data-to="wave medical-imaging smart-hospital alu amplifier humanoid-robot semester-planner">Team leadership</button></li><li><button type="button" data-to="wave driptech reciperun trustport">Pitching &amp; product</button></li></ul>
+          <svg class="lm-wires" aria-hidden="true"></svg>
+          <ul class="lm-projects" aria-label="Projects"><li><a href="projects/neuroclear.html" data-slug="neuroclear" class="lm-hw"><i aria-hidden="true"></i><span>NeuroClear</span><small>2025–26</small></a></li><li><a href="projects/wave.html" data-slug="wave" class="lm-hw"><i aria-hidden="true"></i><span>W.A.V.E</span><small>2026</small></a></li><li><a href="projects/agrhi-iot.html" data-slug="agrhi-iot" class="lm-hw"><i aria-hidden="true"></i><span>Autopot &amp; Fertigation IoT</span><small>2025–27</small></a></li><li><a href="projects/trustport.html" data-slug="trustport" class="lm-ai"><i aria-hidden="true"></i><span>TrustPort</span><small>2025</small></a></li><li><a href="projects/reciperun.html" data-slug="reciperun" class="lm-ai"><i aria-hidden="true"></i><span>RecipeRun</span><small>2026</small></a></li><li><a href="projects/epsscom.html" data-slug="epsscom" class="lm-power"><i aria-hidden="true"></i><span>EPSSCOM 2026</span><small>2026</small></a></li><li><a href="projects/medical-imaging.html" data-slug="medical-imaging" class="lm-ai"><i aria-hidden="true"></i><span>Multi-Model Medical Imaging</span><small>2025</small></a></li><li><a href="projects/smart-hospital.html" data-slug="smart-hospital" class="lm-hw"><i aria-hidden="true"></i><span>Smart Hospital System</span><small>2025</small></a></li><li><a href="projects/speech-enhancement.html" data-slug="speech-enhancement" class="lm-ai"><i aria-hidden="true"></i><span>Speech Enhancement Studio</span><small>2025</small></a></li><li><a href="projects/piezo-harvester.html" data-slug="piezo-harvester" class="lm-power"><i aria-hidden="true"></i><span>Piezoelectric Energy Harvester</span><small>2025</small></a></li><li><a href="projects/dsm-fuzzy.html" data-slug="dsm-fuzzy" class="lm-power"><i aria-hidden="true"></i><span>Fuzzy-Logic Demand-Side Management</span><small>2025</small></a></li><li><a href="projects/diabetes-predictor.html" data-slug="diabetes-predictor" class="lm-ai"><i aria-hidden="true"></i><span>Diabetes Risk Predictor</span><small>2025</small></a></li><li><a href="projects/smart-energy-meter.html" data-slug="smart-energy-meter" class="lm-sw"><i aria-hidden="true"></i><span>Smart Energy Monitor</span><small>2024</small></a></li><li><a href="projects/hydro-labview.html" data-slug="hydro-labview" class="lm-power"><i aria-hidden="true"></i><span>Hydroelectric Plant Simulation</span><small>2024</small></a></li><li><a href="projects/driptech.html" data-slug="driptech" class="lm-hw"><i aria-hidden="true"></i><span>DripTech</span><small>2024–25</small></a></li><li><a href="projects/alu.html" data-slug="alu" class="lm-hw"><i aria-hidden="true"></i><span>2-Bit ALU &amp; Control Unit</span><small>2024</small></a></li><li><a href="projects/amplifier.html" data-slug="amplifier" class="lm-hw"><i aria-hidden="true"></i><span>Two-Stage BJT Amplifier</span><small>2024</small></a></li><li><a href="projects/lighting-design.html" data-slug="lighting-design" class="lm-power"><i aria-hidden="true"></i><span>Lighting Scheme Design</span><small>2024</small></a></li><li><a href="projects/humanoid-robot.html" data-slug="humanoid-robot" class="lm-cad"><i aria-hidden="true"></i><span>Humanoid Robot CAD</span><small>2023</small></a></li><li><a href="projects/semester-planner.html" data-slug="semester-planner" class="lm-sw"><i aria-hidden="true"></i><span>Semester Planner in C</span><small>2023</small></a></li></ul>
+        </div>
       </div>
-      <script type="application/json" id="map-data">{"nodes": [{"id": "wave", "label": "W.A.V.E", "type": "p", "cat": "hw", "featured": true, "sum": "A solar-powered boat that measures water quality across a whole fish pond or canal and uses on-board AI to tell farmers what the readings mean.", "year": "2026"}, {"id": "agrhi-iot", "label": "Autopot & Fertigation IoT", "type": "p", "cat": "hw", "featured": true, "sum": "A two-node IoT system that monitors pH, EC and soil moisture and runs fertigation pumps on schedule, with a Flutter app for live readings, trends and manual control.", "year": "2025–27"}, {"id": "trustport", "label": "TrustPort", "type": "p", "cat": "ai", "featured": true, "sum": "Turns a foreign bank history into a local “shadow” credit score and a verification letter that landlords can check.", "year": "2025"}, {"id": "reciperun", "label": "RecipeRun", "type": "p", "cat": "ai", "featured": true, "sum": "Turns cooking videos, photos and links into structured recipes, grocery lists and a step-by-step cook mode.", "year": "2026"}, {"id": "epsscom", "label": "EPSSCOM 2026", "type": "p", "cat": "power", "featured": true, "sum": "A protection study for a 132/11 kV industrial (data-centre) substation with distributed energy resources, modelled in ETAP.", "year": "2026"}, {"id": "bringup", "label": "BringUp", "type": "p", "cat": "ai", "featured": true, "sum": "Takes a sensor datasheet and an ESP32 board, then writes, flashes and verifies a driver, using a logic analyser on the real bus as proof.", "year": "2026"}, {"id": "medical-imaging", "label": "Multi-Model Medical Imaging", "type": "p", "cat": "ai", "featured": false, "sum": "Classical machine vision against deep learning on medical images, with four team-built models joined into one desktop app.", "year": "2025"}, {"id": "smart-hospital", "label": "Smart Hospital System", "type": "p", "cat": "hw", "featured": false, "sum": "A bedside unit that reads heart rate, SpO₂, temperature and ECG, alarms on abnormal readings and streams to a central Python dashboard.", "year": "2025"}, {"id": "speech-enhancement", "label": "Speech Enhancement Studio", "type": "p", "cat": "ai", "featured": false, "sum": "A MATLAB app that adds realistic noise to speech, cleans it with four algorithms or a mix of them, and compares the results.", "year": "2025"}, {"id": "piezo-harvester", "label": "Piezoelectric Energy Harvester", "type": "p", "cat": "power", "featured": false, "sum": "A simulated inductorless P-SSHC harvesting interface that beats a standard full-bridge rectifier.", "year": "2025"}, {"id": "dsm-fuzzy", "label": "Fuzzy-Logic Demand-Side Management", "type": "p", "cat": "power", "featured": false, "sum": "A Mamdani fuzzy controller that adjusts household power use by time of day, resident type and current demand, simulated in Simulink.", "year": "2025"}, {"id": "diabetes-predictor", "label": "Diabetes Risk Predictor", "type": "p", "cat": "ai", "featured": false, "sum": "Compared eight machine-learning models on the Pima diabetes data, then deployed the winner in a Streamlit web app and a desktop app.", "year": "2025"}, {"id": "smart-energy-meter", "label": "Smart Energy Monitor", "type": "p", "cat": "sw", "featured": false, "sum": "An app that tracks household devices, charts power use and cost, and gives energy-saving recommendations.", "year": "2024"}, {"id": "hydro-labview", "label": "Hydroelectric Plant Simulation", "type": "p", "cat": "power", "featured": false, "sum": "A live LabVIEW model of a hydro plant: water flow, turbine efficiency, environmental impact and revenue, with event logging and a remote web panel.", "year": "2024"}, {"id": "driptech", "label": "DripTech", "type": "p", "cat": "hw", "featured": false, "sum": "A sensor-driven drip-irrigation system with an app for remote tracking and control, developed with effectuation and design thinking.", "year": "2024–25"}, {"id": "alu", "label": "2-Bit ALU & Control Unit", "type": "p", "cat": "hw", "featured": false, "sum": "An arithmetic logic unit that computes F = 4.5A² + ∛(9B) for 2-bit inputs and shows the result on 7-segment displays. Simulated in Multisim and built on a breadboard.", "year": "2024"}, {"id": "amplifier", "label": "Two-Stage BJT Amplifier", "type": "p", "cat": "hw", "featured": false, "sum": "A cascaded common-emitter amplifier with 2N3904 transistors, analysed by hand and checked in simulation.", "year": "2024"}, {"id": "lighting-design", "label": "Lighting Scheme Design", "type": "p", "cat": "power", "featured": false, "sum": "Lighting designs for a literature club, tech club, culture club and common room, calculated by hand and verified with 3D photometric simulation.", "year": "2024"}, {"id": "humanoid-robot", "label": "Humanoid Robot CAD", "type": "p", "cat": "cad", "featured": false, "sum": "A fully articulated humanoid robot modelled in SOLIDWORKS, with exploded views and first-angle engineering drawings for every part.", "year": "2023"}, {"id": "semester-planner", "label": "Semester Planner in C", "type": "p", "cat": "sw", "featured": false, "sum": "A student-activity planner with four user roles, file-based storage and progress reports.", "year": "2023"}, {"id": "s:ESP32 firmware", "label": "ESP32 firmware", "type": "s"}, {"id": "s:Sensors & calibration", "label": "Sensors & calibration", "type": "s"}, {"id": "s:IoT & Firebase", "label": "IoT & Firebase", "type": "s"}, {"id": "s:Flutter / Dart", "label": "Flutter / Dart", "type": "s"}, {"id": "s:Next.js", "label": "Next.js", "type": "s"}, {"id": "s:Python", "label": "Python", "type": "s"}, {"id": "s:FastAPI", "label": "FastAPI", "type": "s"}, {"id": "s:Machine learning", "label": "Machine learning", "type": "s"}, {"id": "s:Computer vision", "label": "Computer vision", "type": "s"}, {"id": "s:LLMs & agents", "label": "LLMs & agents", "type": "s"}, {"id": "s:MATLAB", "label": "MATLAB", "type": "s"}, {"id": "s:Simulink", "label": "Simulink", "type": "s"}, {"id": "s:Signal processing", "label": "Signal processing", "type": "s"}, {"id": "s:LabVIEW", "label": "LabVIEW", "type": "s"}, {"id": "s:Power systems", "label": "Power systems", "type": "s"}, {"id": "s:Power electronics", "label": "Power electronics", "type": "s"}, {"id": "s:ETAP", "label": "ETAP", "type": "s"}, {"id": "s:Circuit design", "label": "Circuit design", "type": "s"}, {"id": "s:Multisim / LTspice", "label": "Multisim / LTspice", "type": "s"}, {"id": "s:SOLIDWORKS & 3D print", "label": "SOLIDWORKS & 3D print", "type": "s"}, {"id": "s:AutoCAD & Relux", "label": "AutoCAD & Relux", "type": "s"}, {"id": "s:C / C++", "label": "C / C++", "type": "s"}, {"id": "s:Team leadership", "label": "Team leadership", "type": "s"}, {"id": "s:Pitching & product", "label": "Pitching & product", "type": "s"}], "links": [{"s": "s:ESP32 firmware", "t": "wave"}, {"s": "s:ESP32 firmware", "t": "agrhi-iot"}, {"s": "s:ESP32 firmware", "t": "smart-hospital"}, {"s": "s:ESP32 firmware", "t": "bringup"}, {"s": "s:Sensors & calibration", "t": "wave"}, {"s": "s:Sensors & calibration", "t": "agrhi-iot"}, {"s": "s:Sensors & calibration", "t": "smart-hospital"}, {"s": "s:IoT & Firebase", "t": "wave"}, {"s": "s:IoT & Firebase", "t": "agrhi-iot"}, {"s": "s:IoT & Firebase", "t": "reciperun"}, {"s": "s:IoT & Firebase", "t": "smart-hospital"}, {"s": "s:Flutter / Dart", "t": "agrhi-iot"}, {"s": "s:Flutter / Dart", "t": "reciperun"}, {"s": "s:Flutter / Dart", "t": "trustport"}, {"s": "s:Next.js", "t": "wave"}, {"s": "s:Python", "t": "trustport"}, {"s": "s:Python", "t": "medical-imaging"}, {"s": "s:Python", "t": "diabetes-predictor"}, {"s": "s:Python", "t": "bringup"}, {"s": "s:Python", "t": "smart-hospital"}, {"s": "s:FastAPI", "t": "wave"}, {"s": "s:FastAPI", "t": "trustport"}, {"s": "s:Machine learning", "t": "wave"}, {"s": "s:Machine learning", "t": "medical-imaging"}, {"s": "s:Machine learning", "t": "diabetes-predictor"}, {"s": "s:Machine learning", "t": "dsm-fuzzy"}, {"s": "s:Computer vision", "t": "medical-imaging"}, {"s": "s:Computer vision", "t": "trustport"}, {"s": "s:LLMs & agents", "t": "trustport"}, {"s": "s:LLMs & agents", "t": "reciperun"}, {"s": "s:LLMs & agents", "t": "bringup"}, {"s": "s:MATLAB", "t": "speech-enhancement"}, {"s": "s:MATLAB", "t": "piezo-harvester"}, {"s": "s:MATLAB", "t": "dsm-fuzzy"}, {"s": "s:MATLAB", "t": "smart-energy-meter"}, {"s": "s:MATLAB", "t": "driptech"}, {"s": "s:MATLAB", "t": "epsscom"}, {"s": "s:Simulink", "t": "piezo-harvester"}, {"s": "s:Simulink", "t": "dsm-fuzzy"}, {"s": "s:Signal processing", "t": "speech-enhancement"}, {"s": "s:Signal processing", "t": "smart-hospital"}, {"s": "s:Signal processing", "t": "wave"}, {"s": "s:LabVIEW", "t": "hydro-labview"}, {"s": "s:Power systems", "t": "epsscom"}, {"s": "s:Power systems", "t": "dsm-fuzzy"}, {"s": "s:Power systems", "t": "hydro-labview"}, {"s": "s:Power systems", "t": "lighting-design"}, {"s": "s:Power electronics", "t": "piezo-harvester"}, {"s": "s:Power electronics", "t": "wave"}, {"s": "s:ETAP", "t": "epsscom"}, {"s": "s:Circuit design", "t": "alu"}, {"s": "s:Circuit design", "t": "amplifier"}, {"s": "s:Circuit design", "t": "smart-hospital"}, {"s": "s:Multisim / LTspice", "t": "alu"}, {"s": "s:Multisim / LTspice", "t": "amplifier"}, {"s": "s:SOLIDWORKS & 3D print", "t": "humanoid-robot"}, {"s": "s:SOLIDWORKS & 3D print", "t": "wave"}, {"s": "s:AutoCAD & Relux", "t": "lighting-design"}, {"s": "s:C / C++", "t": "semester-planner"}, {"s": "s:C / C++", "t": "smart-hospital"}, {"s": "s:C / C++", "t": "wave"}, {"s": "s:C / C++", "t": "agrhi-iot"}, {"s": "s:Team leadership", "t": "wave"}, {"s": "s:Team leadership", "t": "medical-imaging"}, {"s": "s:Team leadership", "t": "smart-hospital"}, {"s": "s:Team leadership", "t": "alu"}, {"s": "s:Team leadership", "t": "amplifier"}, {"s": "s:Team leadership", "t": "humanoid-robot"}, {"s": "s:Team leadership", "t": "semester-planner"}, {"s": "s:Pitching & product", "t": "wave"}, {"s": "s:Pitching & product", "t": "driptech"}, {"s": "s:Pitching & product", "t": "reciperun"}, {"s": "s:Pitching & product", "t": "trustport"}]}</script>
     </section>
 
-    <section class="archive" id="archive" aria-labelledby="archive-title" data-shape="torus" data-x="-0.6" data-y="0" data-o="0.35" data-s="0.9">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Archive</p>
-      <h2 id="archive-title">Coursework &amp; side projects</h2>
-      <p class="lede">14 more projects, with details and figures taken from my reports.</p>
-      <div class="filters" role="group" aria-label="Filter projects"><button aria-pressed="true" data-filter="all">All</button><button aria-pressed="false" data-filter="hw">Hardware &amp; Embedded</button><button aria-pressed="false" data-filter="ai">AI &amp; Data</button><button aria-pressed="false" data-filter="sw">Software</button><button aria-pressed="false" data-filter="power">Power &amp; Simulation</button><button aria-pressed="false" data-filter="cad">Design &amp; CAD</button></div>
+    <section class="archive chapter" id="archive" data-ch="archive" aria-labelledby="archive-title" data-shape="torus" data-x="-0.6" data-y="0" data-o="0.14" data-s="0.9"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">V</span></div>
+        <p class="ch-kicker">Chapter V · Side quests</p>
+        <h2 id="archive-title">Coursework &amp; side projects</h2>
+        <p class="lede">14 more projects, with details and figures taken from my reports.</p>
+      </header>
+      <div class="filters reveal" role="group" aria-label="Filter projects"><button aria-pressed="true" data-filter="all">All</button><button aria-pressed="false" data-filter="hw">Hardware &amp; Embedded</button><button aria-pressed="false" data-filter="ai">AI &amp; Data</button><button aria-pressed="false" data-filter="sw">Software</button><button aria-pressed="false" data-filter="power">Power &amp; Simulation</button><button aria-pressed="false" data-filter="cad">Design &amp; CAD</button></div>
       <ul class="grid" aria-live="polite">
         <li class="card tilt" data-cat="ai" style="view-transition-name:c-medical-imaging">
           <a href="projects/medical-imaging.html">
@@ -337,50 +471,209 @@
       </ul>
     </section>
 
-    <section class="recognition split" id="recognition" aria-labelledby="rec-title" data-shape="galaxy" data-x="0.55" data-y="0" data-o="0.6" data-s="1">
-      <figure class="win-photo reveal zoomable"><img src="assets/img/profile/trophy.webp" alt="AgriXcelerate 2026 Grand Champion trophy, cheque and certificates" width="768" height="1020" loading="lazy"><figcaption>AgriXcelerate 2026 · Grand Champion</figcaption></figure>
+    <section class="journey split rev chapter" id="journey" data-ch="journey" aria-labelledby="journey-title" data-shape="helix" data-x="-0.62" data-y="0" data-o="0.16" data-s="0.9"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
       <div class="split-text">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Recognition</p>
-        <h2 id="rec-title">Awards &amp; credentials</h2>
+        <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">VI</span></div>
+        <p class="ch-kicker">Chapter VI · Journey</p>
+        <h2 id="journey-title">Where I have learned and worked</h2>
+        
+      </header>
+        <ul class="edu">
+          <li class="edu-card glass frame reveal"><p class="t-when">March 2023 – present</p><h3>Bachelor of Electrical &amp; Electronic Engineering (Hons)</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><p>Coursework includes machine vision, digital signal processing, power electronics and drives, embedded software, electrical machines and project management.</p></li>
+          <li class="edu-card glass frame reveal"><p class="t-when">April – September 2025</p><h3>Rocheston Certified AI Engineer Program</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><p>Rocheston AI Engineering course and Microsoft Azure AI Fundamentals.</p></li>
+        </ul>
+      </div>
+      <ol class="timeline">
+          <li class="t-item reveal"><span class="t-node" aria-hidden="true"></span><p class="t-when">May 2026 – Feb 2027</p><h3>Part-time Student Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Developing and maintaining the Autopot monitoring and fertigation IoT systems I built during my student internship.</li></ul></li>
+          <li class="t-item reveal"><span class="t-node" aria-hidden="true"></span><p class="t-when">2025 – 2026</p><h3>Electrical &amp; Electronic Engineering Student Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Engineered a dual-system IoT solution for monitoring and fertigation using ESP32 and ADS1115.</li><li>Built a cross-platform Flutter + Firebase dashboard for real-time pH, EC and moisture tracking.</li><li>Developed the scheduling and manual-override logic for automated nutrient and water delivery.</li><li>Trial-tested the system over 30 days and wrote it up as a research paper.</li></ul></li>
+          <li class="t-item reveal"><span class="t-node" aria-hidden="true"></span><p class="t-when">2023 – present</p><h3>Student</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><ul><li>Firmware, calibration and live dashboard for W.A.V.E, Grand Champion at AgriXcelerate 2026.</li><li>Represented APU at EPSSCOM 2026 (IEEE PES Malaysia), owning the protection coordination study of a 132/11 kV network in ETAP.</li><li>Built RecipeRun (Flutter, Firebase, Gemini + OpenAI) and TrustPort (FastAPI, multi-model AI).</li><li>Now building NeuroClear, my final year project: multi-sensor glasses with on-device AI.</li></ul></li>
+          <li class="t-item reveal"><span class="t-node" aria-hidden="true"></span><p class="t-when">2023 – 2025</p><h3>School Project Group Leader</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><ul><li>Led the team behind a four-model medical imaging app, each model built from scratch by a team member.</li><li>Led group projects in smart-hospital electronics, DripTech irrigation, an ALU in NI Multisim, an amplifier, a C semester planner and a SOLIDWORKS robot.</li></ul></li>
+          <li class="t-item reveal"><span class="t-node" aria-hidden="true"></span><p class="t-when">2025</p><h3>Document Editor &amp; Proofreader</h3><p class="t-org">SureTrack Logistics</p><ul><li>Proofread and edited technical documents for clarity, grammar and consistency, following each client&#x27;s style guide.</li><li>Prioritised tasks to keep projects on schedule.</li></ul></li>
+      </ol>
+    </section>
+
+    <section class="seals chapter" id="seals" data-ch="seals" aria-labelledby="seals-title" data-shape="crest" data-x="0.62" data-y="0" data-o="0.16" data-s="0.8"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">VII</span></div>
+        <p class="ch-kicker">Chapter VII · Seals</p>
+        <h2 id="seals-title">Certificates &amp; recognition</h2>
+        <p class="lede">Credentials I have earned, and the moments that shaped the story so far.</p>
+      </header>
+      <ul class="certs">
+          <li class="cert glass frame reveal">
+            <figure class="cert-img zoomable"><img src="assets/img/certs/rcai.webp" alt="Rocheston Certified AI Engineer (RCAI) certificate" width="1300" height="919" loading="lazy"><figcaption>Rocheston Certified AI Engineer (RCAI)</figcaption></figure>
+            <div class="cert-body">
+              <p class="cert-issuer">Rocheston</p>
+              <h3>Rocheston Certified AI Engineer (RCAI)</h3>
+              <p class="cert-date">Valid until 25 July 2027</p>
+              <p>Completed the full Rocheston AI Engineering programme through APU.</p>
+              <a class="text-link" href="assets/Certificates/RCAI%20certificate.pdf" target="_blank" rel="noopener">View certificate (PDF) <span aria-hidden="true">↗</span></a>
+            </div>
+          </li>
+          <li class="cert glass frame reveal">
+            <figure class="cert-img zoomable"><img src="assets/img/certs/azure-ai-900.webp" alt="Microsoft Certified: Azure AI Fundamentals certificate" width="1300" height="1005" loading="lazy"><figcaption>Microsoft Certified: Azure AI Fundamentals</figcaption></figure>
+            <div class="cert-body">
+              <p class="cert-issuer">Microsoft</p>
+              <h3>Microsoft Certified: Azure AI Fundamentals</h3>
+              <p class="cert-date">Earned 28 May 2025</p>
+              <p>Core AI workloads, machine learning on Azure and Azure AI services.</p>
+              <a class="text-link" href="assets/Certificates/Microsoft%20Azure%20AI%20Fundamentals.pdf" target="_blank" rel="noopener">View certificate (PDF) <span aria-hidden="true">↗</span></a>
+            </div>
+          </li>
+          <li class="cert glass frame reveal">
+            <figure class="cert-img zoomable"><img src="assets/img/certs/agrixcelerate.webp" alt="AgriXcelerate 2026: Certificate of Participation certificate" width="1300" height="920" loading="lazy"><figcaption>AgriXcelerate 2026: Certificate of Participation</figcaption></figure>
+            <div class="cert-body">
+              <p class="cert-issuer">Asia Pacific University</p>
+              <h3>AgriXcelerate 2026: Certificate of Participation</h3>
+              <p class="cert-date">28 September 2026</p>
+              <p>Took part with W.A.V.E, which went on to win Grand Champion.</p>
+              <a class="text-link" href="assets/Certificates/Certificate%20of%20Participation.pdf" target="_blank" rel="noopener">View certificate (PDF) <span aria-hidden="true">↗</span></a>
+            </div>
+          </li>
+      </ul>
+      <div class="rec-wrap">
+        <figure class="win-photo frame reveal zoomable"><img src="assets/img/profile/trophy.webp" alt="AgriXcelerate 2026 Grand Champion trophy, cheque and certificates" width="768" height="1020" loading="lazy"><figcaption>AgriXcelerate 2026 · Grand Champion</figcaption></figure>
         <ul class="recs">
-          <li class="rec reveal rec-top"><p class="rec-k">Award · 2026</p><h3>Grand Champion</h3><p>AgriXcelerate 2026, university category, with W.A.V.E.</p></li>
-          <li class="rec reveal"><p class="rec-k">Research · 2026</p><h3>Lead author</h3><p>“IoT Design for Automated Plant Monitoring and Fertigation Management”: paper and book chapter.</p></li>
-          <li class="rec reveal"><p class="rec-k">Competition · 2026</p><h3>EPSSCOM 2026</h3><p>Representing APU at IEEE PES Malaysia&#x27;s national power-system simulation competition.</p></li>
-          <li class="rec reveal"><p class="rec-k">Certification · 2025</p><h3>Rocheston Certified AI Engineer</h3><p>RCAI programme, APU, April–September 2025.</p></li>
-          <li class="rec reveal"><p class="rec-k">Certification</p><h3>Microsoft Azure AI Fundamentals</h3><p>Core AI workloads and Azure AI services.</p></li>
-          <li class="rec reveal"><p class="rec-k">Hackathons · 2025–26</p><h3>Four global hackathons</h3><p>VisaVerse, RevenueCat Shipyard, ERNIE AI Developer Challenge, Nebius × NVIDIA.</p></li>
+          <li class="rec reveal"><span class="rec-gem" aria-hidden="true"></span><p class="rec-k">Award · 2026</p><h3>Grand Champion</h3><p>AgriXcelerate 2026, with W.A.V.E.</p></li>
+          <li class="rec reveal"><span class="rec-gem" aria-hidden="true"></span><p class="rec-k">Research · 2026</p><h3>Lead author</h3><p>“IoT Design for Automated Plant Monitoring and Fertigation Management”.</p></li>
+          <li class="rec reveal"><span class="rec-gem" aria-hidden="true"></span><p class="rec-k">Competition · 2026</p><h3>EPSSCOM 2026</h3><p>Represented APU at IEEE PES Malaysia&#x27;s national power-system simulation competition.</p></li>
+          <li class="rec reveal"><span class="rec-gem" aria-hidden="true"></span><p class="rec-k">Hackathons · 2025–26</p><h3>Three global hackathons</h3><p>VisaVerse, RevenueCat Shipyard and the ERNIE AI Developer Challenge.</p></li>
         </ul>
       </div>
     </section>
 
-    <section class="experience split rev" id="experience" aria-labelledby="exp-title" data-shape="helix" data-x="-0.55" data-y="0" data-o="0.45" data-s="0.9">
-      <div class="split-text">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Experience</p>
-        <h2 id="exp-title">Where I've worked</h2>
-        <div class="edu reveal"><p class="rec-k">Education · March 2023 – present</p><h3>Bachelor of Electrical &amp; Electronic Engineering (Hons)</h3><p>Asia Pacific University of Technology &amp; Innovation, Kuala Lumpur</p></div>
+    <section class="echoes chapter" id="echoes" data-ch="echoes" aria-labelledby="echoes-title" data-shape="echo" data-x="0" data-y="0.55" data-o="0.16" data-s="1.1"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">VIII</span></div>
+        <p class="ch-kicker">Chapter VIII · Echoes</p>
+        <h2 id="echoes-title">Beyond the bench</h2>
+        <p class="lede">What I love when I am not at the workbench. These are the things that keep me curious.</p>
+      </header>
+      <div class="echo-list">
+        <article class="echo echo-people">
+          <div class="echo-deck frame reveal" data-deck><figure class="echo-shot zoomable on"><img src="assets/img/interests/friends-1.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-12.webp" alt="Friends &amp; family" width="1100" height="823" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-2.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-4.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-3.webp" alt="Friends &amp; family" width="1100" height="1467" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-5.webp" alt="Friends &amp; family" width="1100" height="1467" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-6.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-7.webp" alt="Friends &amp; family" width="1100" height="1467" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-8.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-9.webp" alt="Friends &amp; family" width="1100" height="1467" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-10.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/friends-11.webp" alt="Friends &amp; family" width="1100" height="825" loading="lazy"><figcaption>Friends &amp; family</figcaption></figure><div class="echo-dots" role="group" aria-label="Photos"><button type="button" aria-label="Show photo 1 of 12" aria-current="true"></button><button type="button" aria-label="Show photo 2 of 12"></button><button type="button" aria-label="Show photo 3 of 12"></button><button type="button" aria-label="Show photo 4 of 12"></button><button type="button" aria-label="Show photo 5 of 12"></button><button type="button" aria-label="Show photo 6 of 12"></button><button type="button" aria-label="Show photo 7 of 12"></button><button type="button" aria-label="Show photo 8 of 12"></button><button type="button" aria-label="Show photo 9 of 12"></button><button type="button" aria-label="Show photo 10 of 12"></button><button type="button" aria-label="Show photo 11 of 12"></button><button type="button" aria-label="Show photo 12 of 12"></button></div></div>
+          <div class="echo-text reveal">
+            <p class="echo-k"><svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M3 20c.6-3.8 3-6 6-6s5.4 2.2 6 6M14.6 14.3c.6-.2 1.2-.3 1.9-.3 2.4 0 4.3 1.8 4.8 5"/></svg><span>Echo 01</span></p>
+            <h3>Friends &amp; family</h3>
+            <p class="echo-line">Time with the people I love, and doing what I can to make them happy.</p>
+            <p>My favourite plans are simple ones: a long meal, a trip somewhere new, a celebration that gets everyone in one photo. Making the people around me happy, in small ways or big ones, is what I enjoy most.</p>
+          </div>
+        </article>
+        <article class="echo echo-places rev">
+          <div class="echo-deck frame reveal" data-deck><figure class="echo-shot zoomable on"><img src="assets/img/interests/places-2.webp" alt="New places &amp; great structures" width="1100" height="1467" loading="lazy"><figcaption>New places &amp; great structures</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/places-4.webp" alt="New places &amp; great structures" width="1100" height="1467" loading="lazy"><figcaption>New places &amp; great structures</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/places-1.webp" alt="New places &amp; great structures" width="1100" height="825" loading="lazy"><figcaption>New places &amp; great structures</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/places-3.webp" alt="New places &amp; great structures" width="1100" height="1467" loading="lazy"><figcaption>New places &amp; great structures</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/places-5.webp" alt="New places &amp; great structures" width="1100" height="1467" loading="lazy"><figcaption>New places &amp; great structures</figcaption></figure><div class="echo-dots" role="group" aria-label="Photos"><button type="button" aria-label="Show photo 1 of 5" aria-current="true"></button><button type="button" aria-label="Show photo 2 of 5"></button><button type="button" aria-label="Show photo 3 of 5"></button><button type="button" aria-label="Show photo 4 of 5"></button><button type="button" aria-label="Show photo 5 of 5"></button></div></div>
+          <div class="echo-text reveal">
+            <p class="echo-k"><svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21h20M4 21V10l8-6 8 6v11M8.5 21v-5a3.5 3.5 0 0 1 7 0v5M4 10h16"/></svg><span>Echo 02</span></p>
+            <h3>New places &amp; great structures</h3>
+            <p class="echo-line">I travel to look at how things are built.</p>
+            <p>Skylines, bridges, heritage streets and stadiums: I look at the structure as much as the view. I keep wondering how each one was engineered, like the steel supertrees in Singapore.</p>
+          </div>
+        </article>
+        <article class="echo echo-food">
+          <div class="echo-deck frame reveal" data-deck><figure class="echo-shot zoomable on"><img src="assets/img/interests/food-1.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-10.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-2.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="825" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-6.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-9.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="491" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-7.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="825" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-3.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-4.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-5.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/food-8.webp" alt="Food: finding it, eating it, cooking it" width="1100" height="1467" loading="lazy"><figcaption>Food: finding it, eating it, cooking it</figcaption></figure><div class="echo-dots" role="group" aria-label="Photos"><button type="button" aria-label="Show photo 1 of 10" aria-current="true"></button><button type="button" aria-label="Show photo 2 of 10"></button><button type="button" aria-label="Show photo 3 of 10"></button><button type="button" aria-label="Show photo 4 of 10"></button><button type="button" aria-label="Show photo 5 of 10"></button><button type="button" aria-label="Show photo 6 of 10"></button><button type="button" aria-label="Show photo 7 of 10"></button><button type="button" aria-label="Show photo 8 of 10"></button><button type="button" aria-label="Show photo 9 of 10"></button><button type="button" aria-label="Show photo 10 of 10"></button></div></div>
+          <div class="echo-text reveal">
+            <p class="echo-k"><svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18a9 9 0 0 1-18 0zM9 8c0-1.5 1.5-1.5 1.5-3S9 3.5 9 2M14 8c0-1.5 1.5-1.5 1.5-3S14 3.5 14 2M8 21h8"/></svg><span>Echo 03</span></p>
+            <h3>Food: finding it, eating it, cooking it</h3>
+            <p class="echo-line">Trying new cuisines, then trying to make them at home.</p>
+            <p>Malaysia makes this easy. I&#x27;ll try anything once, from nasi lemak to sushi to a good burger, and the best ones end up as an experiment in my own kitchen. It&#x27;s also part of why I built RecipeRun.</p>
+          </div>
+        </article>
+        <article class="echo echo-stories rev">
+          <div class="echo-deck frame reveal" data-deck><figure class="echo-shot zoomable on"><img src="assets/img/interests/anime-1.webp" alt="Games, anime, art &amp; animation" width="1100" height="1467" loading="lazy"><figcaption>Games, anime, art &amp; animation</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/anime-4.webp" alt="Games, anime, art &amp; animation" width="1100" height="639" loading="lazy"><figcaption>Games, anime, art &amp; animation</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/anime-2.webp" alt="Games, anime, art &amp; animation" width="1100" height="1467" loading="lazy"><figcaption>Games, anime, art &amp; animation</figcaption></figure><figure class="echo-shot zoomable"><img src="assets/img/interests/anime-3.webp" alt="Games, anime, art &amp; animation" width="1100" height="1467" loading="lazy"><figcaption>Games, anime, art &amp; animation</figcaption></figure><div class="echo-dots" role="group" aria-label="Photos"><button type="button" aria-label="Show photo 1 of 4" aria-current="true"></button><button type="button" aria-label="Show photo 2 of 4"></button><button type="button" aria-label="Show photo 3 of 4"></button><button type="button" aria-label="Show photo 4 of 4"></button></div></div>
+          <div class="echo-text reveal">
+            <p class="echo-k"><svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/><path d="M19 3v4M17 5h4"/></svg><span>Echo 04</span></p>
+            <h3>Games, anime, art &amp; animation</h3>
+            <p class="echo-line">I love the craft, the art and the feeling that animation can carry.</p>
+            <p>I play video games and watch anime, and what keeps me coming back is the artistry. A single animated scene can hold hundreds of hand-made decisions about colour, timing, light and motion, and the best ones make you feel something words can&#x27;t. I admire the people who pour that much care into a frame, and the way a world, a character or a piece of music can stay with you long after it ends. That love of craft is a big part of why this portfolio looks the way it does.</p>
+          </div>
+        </article>
       </div>
-      <ol class="timeline">
-          <li class="t-item reveal"><p class="t-when">May 2026 – Feb 2027</p><h3>Part-time Student Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Developing and maintaining the Autopot monitoring and fertigation IoT systems I built as a full-time intern.</li></ul></li>
-          <li class="t-item reveal"><p class="t-when">2025 – 2026</p><h3>Electrical &amp; Electronic Engineering Intern</h3><p class="t-org">AGRHI HUB · Asia Pacific University</p><ul><li>Engineered a dual-system IoT solution for monitoring and fertigation using ESP32 and ADS1115.</li><li>Built a Flutter + Firebase dashboard for real-time pH, EC and moisture tracking.</li><li>Wrote the scheduling and manual-override logic for automated nutrient and water delivery.</li><li>Ran a 30-day trial and wrote the research paper on it.</li></ul></li>
-          <li class="t-item reveal"><p class="t-when">2023 – present</p><h3>BEng (Hons) Student &amp; Project Group Leader</h3><p class="t-org">Asia Pacific University of Technology &amp; Innovation</p><ul><li>Led group projects every year, from C programming and SOLIDWORKS to digital logic, smart-hospital hardware and multi-model medical AI.</li><li>Grand Champion at AgriXcelerate 2026. Representing APU at EPSSCOM 2026.</li></ul></li>
-          <li class="t-item reveal"><p class="t-when">2025</p><h3>Document Editor &amp; Proofreader</h3><p class="t-org">SureTrack Logistics</p><ul><li>Edited and proofread technical documents for accuracy, clarity and consistency, following each client&#x27;s style guide.</li></ul></li>
-      </ol>
     </section>
 
-    <section class="contact split" id="contact" aria-labelledby="contact-title" data-shape="sphere" data-x="0.5" data-y="0" data-o="1" data-s="1">
-      <div class="split-text reveal">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Contact</p>
-        <h2 id="contact-title">Let's build something that works in the field.</h2>
+    <section class="contact split chapter" id="contact" data-ch="contact" aria-labelledby="contact-title" data-shape="gem" data-x="0.5" data-y="0" data-o="0.85" data-s="1"><div class="echo-mark" aria-hidden="true"><svg viewBox="-45 -115 90 230">
+        <path class="em-line" d="M0,-115V115"/><path class="em-flare" d="M-42,0H42"/>
+        <path class="em-wave" d="M0,-66L1.2,-64L1.3,-61L1.7,-58L1.7,-55L2.0,-52L2.5,-49L2.2,-46L3.5,-43L4.8,-40L6.6,-37L4.0,-34L6.3,-31L5.6,-28L14.0,-25L14.8,-22L7.6,-19L23.3,-16L25.3,-13L21.3,-10L21.8,-7L13.1,-4L10.3,-1L21.0,2L11.0,5L13.1,8L13.3,11L8.7,14L14.6,17L12.7,20L15.8,23L10.4,26L9.8,29L7.2,32L6.9,35L4.7,38L3.3,41L4.5,44L3.6,47L2.7,50L2.1,53L1.5,56L1.3,59L1.2,62L0,66L-1.2,62L-1.3,59L-1.5,56L-2.1,53L-2.7,50L-3.6,47L-4.5,44L-3.3,41L-4.7,38L-6.9,35L-7.2,32L-9.8,29L-10.4,26L-15.8,23L-12.7,20L-14.6,17L-8.7,14L-13.3,11L-13.1,8L-11.0,5L-21.0,2L-10.3,-1L-13.1,-4L-21.8,-7L-21.3,-10L-25.3,-13L-23.3,-16L-7.6,-19L-14.8,-22L-14.0,-25L-5.6,-28L-6.3,-31L-4.0,-34L-6.6,-37L-4.8,-40L-3.5,-43L-2.2,-46L-2.5,-49L-2.0,-52L-1.7,-55L-1.7,-58L-1.3,-61L-1.2,-64Z"/><g class="em-stars"><path d="M0,-51L1.1,-47.1L5,-46L1.1,-44.9L0,-41L-1.1,-44.9L-5,-46L-1.1,-47.1Z" style="--d:0.00s"/><path d="M0,-31L1.54,-25.54L7,-24L1.54,-22.46L0,-17L-1.54,-22.46L-7,-24L-1.54,-25.54Z" style="--d:0.25s"/><path d="M0,-11L2.42,-2.42L11,0L2.42,2.42L0,11L-2.42,2.42L-11,0L-2.42,-2.42Z" style="--d:0.50s"/><path d="M0,17L1.54,22.46L7,24L1.54,25.54L0,31L-1.54,25.54L-7,24L-1.54,22.46Z" style="--d:0.75s"/><path d="M0,41L1.1,44.9L5,46L1.1,47.1L0,51L-1.1,47.1L-5,46L-1.1,44.9Z" style="--d:1.00s"/></g>
+      </svg></div>
+      <div class="split-text">
+        <header class="ch-head reveal">
+        <div class="ch-seal"><svg class="gem gem-sm" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg><span class="ch-num">✦</span></div>
+        <p class="ch-kicker">Epilogue</p>
+        <h2 id="contact-title">Let's write the next chapter together.</h2>
         <p class="lede">I'm looking for internships and graduate roles in embedded systems, IoT, AI engineering and power. I'm based in Kuala Lumpur.</p>
-        <a class="email" href="mailto:chisomo.mbewe04@gmail.com">chisomo.mbewe04@gmail.com</a>
-        <div class="cta">
+      </header>
+        <a class="email reveal" href="mailto:chisomo.mbewe04@gmail.com">chisomo.mbewe04@gmail.com</a>
+        <div class="cta reveal">
           <button class="btn copy magnetic" type="button" data-copy="chisomo.mbewe04@gmail.com">Copy email</button>
-          <a class="btn btn-grad magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn btn-fill magnetic" href="assets/Chisomo_Mbewe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           <a class="btn magnetic" href="https://www.linkedin.com/in/chisomo-mbewe-aab533274" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn magnetic" href="https://github.com/JohnMbewe04" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="split-visual"><div class="orb-slot" data-anchor data-k="1.05"></div></div>
+      <div class="split-visual"><div class="orb-slot" data-anchor data-k="1.3"><svg class="gem gem-end" viewBox="-110 -125 220 240" aria-hidden="true">
+      <circle class="gm-halo" r="86"/>
+      <g class="gm-frame">
+        <path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z"/><path class="gm-wing" d="M57,-16C78,-30 96,-50 104,-80C94,-62 82,-54 70,-50C86,-42 95,-30 99,-12C88,-19 76,-20 64,-12ZM60,8C77,12 90,24 95,42C83,32 72,28 60,25Z" transform="scale(-1 1)"/>
+        <path class="gm-crown" d="M0,-60L9,-80L0,-118L-9,-80Z"/><path class="gm-crown-x" d="M0,-101L3.74,-87.74L17,-84L3.74,-80.26L0,-67L-3.74,-80.26L-17,-84L-3.74,-87.74Z"/>
+        <path class="gm-pendant" d="M0,60L9,77L0,102L-9,77Z"/>
+        <circle class="gm-ring" r="61"/>
+      </g>
+      <circle class="gm-orb" r="54"/><g class="gm-dust"><circle cx="-14.1" cy="-27.9" r="1.4" style="--d:0.22s"/><circle cx="2.9" cy="-10.7" r="0.7" style="--d:1.52s"/><circle cx="-37.0" cy="-5.3" r="0.7" style="--d:0.27s"/><circle cx="-6.0" cy="26.1" r="0.7" style="--d:0.67s"/><circle cx="10.2" cy="35.8" r="1.3" style="--d:1.19s"/><circle cx="38.1" cy="-36.3" r="1.6" style="--d:0.87s"/><circle cx="-28.5" cy="-30.6" r="1.0" style="--d:2.45s"/><circle cx="-25.5" cy="6.5" r="1.4" style="--d:1.12s"/><circle cx="3.8" cy="-35.0" r="0.7" style="--d:0.62s"/><circle cx="14.4" cy="-5.8" r="1.0" style="--d:1.76s"/><circle cx="-3.7" cy="-16.0" r="1.6" style="--d:2.10s"/><circle cx="-20.5" cy="6.0" r="1.2" style="--d:2.63s"/><circle cx="18.4" cy="-17.0" r="1.8" style="--d:0.35s"/><circle cx="-6.6" cy="20.6" r="0.8" style="--d:1.47s"/><circle cx="-36.9" cy="13.5" r="1.5" style="--d:1.72s"/><circle cx="30.0" cy="-14.9" r="1.4" style="--d:1.78s"/><circle cx="6.4" cy="-3.5" r="1.6" style="--d:2.83s"/><circle cx="-2.1" cy="13.1" r="0.7" style="--d:2.10s"/><circle cx="11.8" cy="39.4" r="1.6" style="--d:0.85s"/><circle cx="-9.1" cy="13.5" r="0.6" style="--d:1.39s"/><circle cx="-26.6" cy="-30.6" r="0.7" style="--d:2.30s"/><circle cx="-29.7" cy="-20.2" r="1.1" style="--d:2.61s"/></g><g class="gm-glyph"><path d="M0,-30L22,0L0,30L-22,0Z"/><path d="M-38,0C-30,-16 -20,-16 -12,0S6,16 12,0 30,-16 38,0"/><circle r="4"/></g><ellipse class="gm-shine" cx="-20" cy="-26" rx="17" ry="8" transform="rotate(-32 -20 -26)"/>
+      <circle class="gm-inner" r="55"/>
+      <path class="gm-spark" d="M0,-126L1.76,-119.76L8,-118L1.76,-116.24L0,-110L-1.76,-116.24L-8,-118L-1.76,-119.76Z"/>
+    </svg></div></div>
     </section>
   </main>
   <footer class="footer">
